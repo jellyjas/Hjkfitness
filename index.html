@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join the Waitlist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#141414;
+    --ink-soft:#5c5c5c;
+    --lime:#CFFF3A;
+    --lime-deep:#a7d600;
+    --line:#e7e7e2;
+    --cream:#fbfbf7;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'DM Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,.wordmark{
+    font-family:'Playfair Display', serif;
+  }
+  a{color:inherit;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:28px clamp(20px,5vw,72px);
+    border-bottom:1px solid var(--line);
+  }
+  .wordmark{
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:0.02em;
+  }
+  .wordmark span{color:var(--lime-deep);}
+  .nav-tag{
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:clamp(56px,10vw,120px) clamp(20px,5vw,72px) clamp(40px,6vw,80px);
+    max-width:900px;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink);
+    background:var(--lime);
+    padding:7px 14px;
+    border-radius:100px;
+    margin-bottom:28px;
+    font-weight:700;
+  }
+  .dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--ink);
+    display:inline-block;
+  }
+  h1{
+    font-size:clamp(34px,5.6vw,64px);
+    line-height:1.08;
+    font-weight:600;
+    margin:0 0 22px;
+    letter-spacing:-0.01em;
+  }
+  h1 em{
+    font-style:italic;
+    color:var(--ink);
+    text-decoration:underline;
+    text-decoration-color:var(--lime);
+    text-decoration-thickness:10px;
+    text-underline-offset:-2px;
+    font-weight:600;
+  }
+  .sub{
+    font-size:clamp(16px,2vw,19px);
+    line-height:1.6;
+    color:var(--ink-soft);
+    max-width:560px;
+    margin:0 0 40px;
+  }
+
+  /* ---------- FORM ---------- */
+  .form-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:clamp(22px,4vw,34px);
+    max-width:480px;
+  }
+  .form-card h2{
+    font-size:20px;
+    font-weight:600;
+    margin:0 0 4px;
+  }
+  .form-card .helper{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:0 0 20px;
+  }
+  form{display:flex;flex-direction:column;gap:12px;}
+  label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    font-weight:700;
+    margin-bottom:-6px;
+  }
+  input{
+    font-family:'DM Sans', sans-serif;
+    font-size:15px;
+    padding:13px 14px;
+    border-radius:10px;
+    border:1.5px solid var(--line);
+    background:#fff;
+    outline:none;
+    color:var(--ink);
+    width:100%;
+  }
+  input:focus{
+    border-color:var(--lime-deep);
+    box-shadow:0 0 0 3px rgba(207,255,58,0.35);
+  }
+  button{
+    margin-top:8px;
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:0.01em;
+    background:var(--ink);
+    color:#fff;
+    border:none;
+    padding:15px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:transform .15s ease, background .15s ease;
+  }
+  button:hover{background:#000;}
+  button:active{transform:scale(0.98);}
+  button:focus-visible{outline:3px solid var(--lime-deep);outline-offset:2px;}
+  .fine{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:14px;
+  }
+  .success{
+    display:none;
+    font-size:15px;
+    font-weight:600;
+    padding:6px 0 2px;
+  }
+  .success.show{display:block;}
+  form.hide{display:none;}
+
+  /* ---------- SIGNATURE: crossed-out plans ---------- */
+  .signature{
+    padding:clamp(50px,8vw,90px) clamp(20px,5vw,72px);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:var(--cream);
+  }
+  .signature-inner{
+    max-width:900px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  @media(min-width:820px){
+    .signature-inner{grid-template-columns:1.1fr 1fr;align-items:center;}
+  }
+  .plan-stack{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .plan-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  .plan-row .num{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    color:#b8b8b0;
+    width:26px;
+    flex-shrink:0;
+  }
+  .plan-row .label{
+    text-decoration:line-through;
+    text-decoration-color:#c8c8c0;
+    text-decoration-thickness:1.5px;
+  }
+  .plan-row.final .num{color:var(--ink);}
+  .plan-row.final .label{
+    text-decoration:none;
+    color:var(--ink);
+    font-weight:700;
+  }
+  .signature-copy h2{
+    font-size:clamp(24px,3.4vw,34px);
+    line-height:1.2;
+    font-weight:600;
+    margin:0 0 16px;
+  }
+  .signature-copy p{
+    font-size:15.5px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .signature-copy .highlight{
+    background:linear-gradient(to top, var(--lime) 38%, transparent 38%);
+    padding:0 2px;
+  }
+
+  /* ---------- FIT SECTION ---------- */
+  .fit{
+    padding:clamp(56px,9vw,100px) clamp(20px,5vw,72px);
+    max-width:1000px;
+    margin:0 auto;
+  }
+  .fit h2{
+    font-size:clamp(24px,3.4vw,32px);
+    font-weight:600;
+    margin:0 0 8px;
+    text-align:center;
+  }
+  .fit .sub-label{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:14px;
+    margin:0 0 44px;
+  }
+  .fit-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:16px;
+    overflow:hidden;
+  }
+  @media(min-width:760px){
+    .fit-grid{grid-template-columns:1fr 1fr;}
+  }
+  .fit-col{
+    background:#fff;
+    padding:clamp(24px,4vw,38px);
+  }
+  .fit-col h3{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    font-weight:700;
+    margin:0 0 20px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .fit-col.yes h3{color:var(--ink);}
+  .fit-col.no h3{color:var(--ink-soft);}
+  .mark{
+    width:20px;height:20px;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;justify-content:center;
+    font-size:12px;
+    font-weight:700;
+    flex-shrink:0;
+  }
+  .fit-col.yes .mark{background:var(--lime);color:var(--ink);}
+  .fit-col.no .mark{background:#efefe9;color:var(--ink-soft);}
+  .fit-col ul{
+    list-style:none;
+    margin:0;padding:0;
+    display:flex;flex-direction:column;gap:16px;
+  }
+  .fit-col li{
+    display:flex;
+    gap:12px;
+    font-size:15px;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .fit-col.no li{color:var(--ink-soft);}
+  .fit-col li .mark{margin-top:1px;}
+
+  /* ---------- CLOSING CTA ---------- */
+  .closing{
+    padding:clamp(60px,10vw,110px) clamp(20px,5vw,72px);
+    text-align:center;
+    max-width:640px;
+    margin:0 auto;
+  }
+  .closing h2{
+    font-size:clamp(26px,4vw,38px);
+    font-weight:600;
+    margin:0 0 14px;
+    line-height:1.15;
+  }
+  .closing p{
+    color:var(--ink-soft);
+    font-size:15.5px;
+    margin:0 0 30px;
+  }
+  .closing a.btn{
+    display:inline-block;
+    background:var(--ink);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-size:15px;
+    padding:15px 30px;
+    border-radius:10px;
+  }
+  .closing a.btn:hover{background:#000;}
+
+  footer{
+    padding:26px clamp(20px,5vw,72px) 40px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wordmark">J<span>K</span> Coaching</div>
+  <div class="nav-tag">Applications opening soon</div>
+</nav>
+
+<section class="hero">
+  <span class="eyebrow"><span class="dot"></span>Waitlist &mdash; limited spots on open</span>
+  <h1>Most coaches hand you<br>a plan. I fix why the<br><em>last 10</em> didn't work.</h1>
+  <p class="sub">1:1 coaching for people who aren't lazy &mdash; just lost without a path that actually fits their life. Applications open soon. Get on the list to hear first, before spots go public.</p>
+
+  <div class="form-card">
+    <h2>Get on the list</h2>
+    <p class="helper">No spam, no sales calls yet &mdash; just a heads up the moment applications open.</p>
+    <form id="waitlistForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your name">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="you@email.com">
+      <label for="instagram">Instagram handle</label>
+      <input type="text" id="instagram" name="instagram" placeholder="@yourhandle">
+      <button type="submit">Join the waitlist</button>
+      <p class="fine">We'll reach out personally when applications open &mdash; this list gets first access.</p>
+    </form>
+    <p class="success" id="successMsg">You're on the list. Watch your inbox &mdash; we'll reach out personally when applications open.</p>
+  </div>
+</section>
+
+<section class="signature">
+  <div class="signature-inner">
+    <div class="plan-stack">
+      <div class="plan-row"><span class="num">01</span><span class="label">Another 30-day meal plan</span></div>
+      <div class="plan-row"><span class="num">02</span><span class="label">The app with 500 workouts you never open</span></div>
+      <div class="plan-row"><span class="num">03</span><span class="label">A macro spreadsheet you quit tracking</span></div>
+      <div class="plan-row"><span class="num">04</span><span class="label">A trainer who ghosts after week two</span></div>
+      <div class="plan-row final"><span class="num">05</span><span class="label">A coach who asks why the first four didn't stick</span></div>
+    </div>
+    <div class="signature-copy">
+      <h2>The problem was never <span class="highlight">the plan.</span></h2>
+      <p>You don't need another program. You need someone in your corner asking the right questions, spotting the pattern, and keeping you honest when life gets in the way. Fitness is the foundation. The physique is just the byproduct.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fit">
+  <h2>Who this is actually for</h2>
+  <p class="sub-label">This isn't for everyone &mdash; and that's the point.</p>
+  <div class="fit-grid">
+    <div class="fit-col yes">
+      <h3><span class="mark">&#10003;</span>This is for you if</h3>
+      <ul>
+        <li><span class="mark">&#10003;</span>You've started and stopped before, and you're done blaming yourself for it.</li>
+        <li><span class="mark">&#10003;</span>You want a real person checking in, not a calendar full of Zoom calls.</li>
+        <li><span class="mark">&#10003;</span>You're willing to message, be honest, and actually show up.</li>
+        <li><span class="mark">&#10003;</span>You want the mindset piece, not just another workout split.</li>
+      </ul>
+    </div>
+    <div class="fit-col no">
+      <h3><span class="mark">&times;</span>This isn't for you if</h3>
+      <ul>
+        <li><span class="mark">&times;</span>You want a 6-week shred with zero conversation about why it didn't stick last time.</li>
+        <li><span class="mark">&times;</span>You'd rather someone else do the work for you.</li>
+        <li><span class="mark">&times;</span>You're not ready to be honest when a week goes sideways.</li>
+        <li><span class="mark">&times;</span>You're looking for the cheapest option, not the right one.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>Spots are limited when applications open.</h2>
+  <p>The waitlist gets first access &mdash; before this goes public anywhere else.</p>
+  <a href="#waitlistForm" class="btn">Join the waitlist</a>
+</section>
+
+<footer>
+  <span>&copy; 2026 JK Coaching. All rights reserved.</span>
+  <span>Questions? Send a message on Instagram.</span>
+</footer>
+
+<script>
+  const form = document.getElementById('waitlistForm');
+  const successMsg = document.getElementById('successMsg');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    // TODO: Replace this block with your real form backend.
+    // Easiest options (free, no code):
+    //   1. Formspree.io  -> create a form, then set this <form>'s action to
+    //      "https://formspree.io/f/YOUR_ID" and method="POST", remove this JS block.
+    //   2. Tally.so or Google Forms embedded instead of this custom form.
+    // Until then, this just shows a success state and does NOT save the data anywhere.
+
+    form.classList.add('hide');
+    successMsg.classList.add('show');
+  });
+</script>
+
+</body>
+</html>
