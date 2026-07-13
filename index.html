@@ -254,6 +254,13 @@
     color:var(--ink-soft);
     margin:0;
   }
+  .success-story{
+    margin-top:14px !important;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+    color:var(--ink) !important;
+    font-style:italic;
+  }
   form[hidden]{display:none;}
 
   /* ---------- SIGNATURE: crossed-out plans ---------- */
@@ -449,8 +456,8 @@
 
 <section class="hero">
   <span class="eyebrow"><span class="dot"></span>1:1 coaching for women &mdash; applications open</span>
-  <h1>The gym didn't just change my body.<br>It changed <em>everything</em> after it.</h1>
-  <p class="sub">I'm Jasmine. Fitness gave me confidence I didn't have, structure I needed, and a happier version of me &mdash; long before it changed how I looked. I built HJKfitness to hand that same shift to women who are ready to start but don't know how. No experience required. Applications are open now.</p>
+  <h1>You don't need to know where to start.<br>You just need to <em>start</em>.</h1>
+  <p class="sub">I'm Jasmine. 1:1 coaching built for women who are new to the gym &mdash; no experience required, no judgment, just a real plan and someone in your corner. Applications are open now; spots are limited.</p>
 
   <div class="form-card">
     <div class="form-head">
@@ -504,8 +511,13 @@
       </div>
 
       <div class="step" data-step="3" hidden>
-        <label for="besttime">Best time to reach you?</label>
-        <input type="text" id="besttime" name="besttime" required placeholder="e.g. weekday evenings after 6pm">
+        <label>Best time to reach you?</label>
+        <div class="pill-group" role="radiogroup" aria-label="Best time to reach you">
+          <label class="pill"><input type="radio" name="besttime" value="Morning" required><span>Morning</span></label>
+          <label class="pill"><input type="radio" name="besttime" value="Afternoon" required><span>Afternoon</span></label>
+          <label class="pill"><input type="radio" name="besttime" value="Evening" required><span>Evening</span></label>
+          <label class="pill"><input type="radio" name="besttime" value="Anytime" required><span>Anytime</span></label>
+        </div>
         <div class="step-actions">
           <button type="button" class="prev-btn" data-prev="2">Back</button>
           <button type="submit" class="submit-btn">Submit application</button>
@@ -516,6 +528,7 @@
     <div class="success" id="successMsg" aria-live="polite">
       <p class="success-title"><span id="successName"></span>You're in &mdash; application received.</p>
       <p>Thanks for applying. Due to high volume, expect to hear from me personally within the next 72 hours.</p>
+      <p class="success-story"><strong>While you wait &mdash;</strong> the gym didn't just change my body. It changed everything after it. Fitness gave me confidence I didn't have, structure I needed, and a happier version of me &mdash; long before it ever changed how I looked. That's what I want for you too.</p>
     </div>
   </div>
 </section>
