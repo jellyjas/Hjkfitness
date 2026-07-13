@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join the Waitlist</title>
+<title>Apply for Coaching — HJKfitness</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -118,7 +118,24 @@
     color:var(--ink-soft);
     margin:0 0 20px;
   }
-  form{display:flex;flex-direction:column;gap:12px;}
+  .progress{
+    display:flex;
+    gap:8px;
+    margin-bottom:22px;
+  }
+  .progress .progress-dot{
+    width:28px;
+    height:4px;
+    border-radius:4px;
+    background:var(--line);
+    transition:background .2s ease;
+  }
+  .progress .progress-dot.active{background:var(--lime-deep);}
+  .progress .progress-dot.done{background:var(--ink);}
+
+  .step{display:flex;flex-direction:column;gap:12px;}
+  .step[hidden]{display:none;}
+
   label{
     font-size:11px;
     text-transform:uppercase;
@@ -127,7 +144,7 @@
     font-weight:700;
     margin-bottom:-6px;
   }
-  input{
+  input, textarea{
     font-family:'DM Sans', sans-serif;
     font-size:15px;
     padding:13px 14px;
@@ -138,10 +155,52 @@
     color:var(--ink);
     width:100%;
   }
-  input:focus{
+  textarea{
+    min-height:88px;
+    resize:vertical;
+  }
+  input:focus, textarea:focus{
     border-color:var(--lime-deep);
     box-shadow:0 0 0 3px rgba(207,255,58,0.35);
   }
+
+  .pill-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .pill{position:relative;}
+  .pill input{
+    position:absolute;
+    opacity:0;
+    width:100%;
+    height:100%;
+    margin:0;
+    cursor:pointer;
+  }
+  .pill span{
+    display:inline-flex;
+    align-items:center;
+    font-size:13.5px;
+    font-weight:600;
+    padding:9px 14px;
+    border-radius:100px;
+    border:1.5px solid var(--line);
+    background:#fff;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .pill:has(input:checked) span{
+    background:var(--lime);
+    border-color:var(--lime-deep);
+    color:var(--ink);
+  }
+  .pill input:focus-visible + span{
+    outline:3px solid var(--lime-deep);
+    outline-offset:2px;
+  }
+
   button{
     margin-top:8px;
     font-family:'DM Sans', sans-serif;
@@ -159,6 +218,21 @@
   button:hover{background:#000;}
   button:active{transform:scale(0.98);}
   button:focus-visible{outline:3px solid var(--lime-deep);outline-offset:2px;}
+
+  .step-actions{
+    display:flex;
+    gap:10px;
+    margin-top:0;
+  }
+  .step-actions button{margin-top:0;flex:1;}
+  .step-actions .prev-btn{
+    flex:0 0 auto;
+    background:#fff;
+    color:var(--ink);
+    border:1.5px solid var(--line);
+  }
+  .step-actions .prev-btn:hover{background:var(--cream);}
+
   .fine{
     font-size:12px;
     color:var(--ink-soft);
@@ -166,12 +240,21 @@
   }
   .success{
     display:none;
-    font-size:15px;
-    font-weight:600;
     padding:6px 0 2px;
   }
   .success.show{display:block;}
-  form.hide{display:none;}
+  .success-title{
+    font-size:17px;
+    font-weight:700;
+    margin:0 0 8px;
+  }
+  .success p{
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  form[hidden]{display:none;}
 
   /* ---------- SIGNATURE: crossed-out plans ---------- */
   .signature{
@@ -360,44 +443,95 @@
 <body>
 
 <nav>
-  <div class="wordmark">J<span>K</span> Coaching</div>
-  <div class="nav-tag">Applications opening soon</div>
+  <div class="wordmark">HJK<span>fitness</span></div>
+  <div class="nav-tag">Applications open</div>
 </nav>
 
 <section class="hero">
-  <span class="eyebrow"><span class="dot"></span>Waitlist &mdash; limited spots on open</span>
-  <h1>Most coaches hand you<br>a plan. I fix why the<br><em>last 10</em> didn't work.</h1>
-  <p class="sub">1:1 coaching for people who aren't lazy &mdash; just lost without a path that actually fits their life. Applications open soon. Get on the list to hear first, before spots go public.</p>
+  <span class="eyebrow"><span class="dot"></span>1:1 coaching for women &mdash; applications open</span>
+  <h1>The gym didn't just change my body.<br>It changed <em>everything</em> after it.</h1>
+  <p class="sub">I'm Jasmine. Fitness gave me confidence I didn't have, structure I needed, and a happier version of me &mdash; long before it changed how I looked. I built HJKfitness to hand that same shift to women who are ready to start but don't know how. No experience required. Applications are open now.</p>
 
   <div class="form-card">
-    <h2>Get on the list</h2>
-    <p class="helper">No spam, no sales calls yet &mdash; just a heads up the moment applications open.</p>
-    <form id="waitlistForm">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required placeholder="Your name">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required placeholder="you@email.com">
-      <label for="instagram">Instagram handle</label>
-      <input type="text" id="instagram" name="instagram" placeholder="@yourhandle">
-      <button type="submit">Join the waitlist</button>
-      <p class="fine">We'll reach out personally when applications open &mdash; this list gets first access.</p>
+    <div class="form-head">
+      <h2 id="formHeading">Apply for coaching</h2>
+      <p class="helper" id="formHelper">Takes about 2 minutes. Due to high volume, expect a response within 72 hours.</p>
+    </div>
+
+    <div class="progress" id="progress" aria-hidden="true">
+      <span class="progress-dot active" data-dot="1"></span>
+      <span class="progress-dot" data-dot="2"></span>
+      <span class="progress-dot" data-dot="3"></span>
+    </div>
+
+    <form id="applyForm" novalidate>
+      <div class="step" data-step="1">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@email.com">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
+        <label for="instagram">Instagram handle</label>
+        <input type="text" id="instagram" name="instagram" required placeholder="@yourhandle">
+        <button type="button" class="next-btn" data-next="2">Continue</button>
+      </div>
+
+      <div class="step" data-step="2" hidden>
+        <label>Age range</label>
+        <div class="pill-group" role="radiogroup" aria-label="Age range">
+          <label class="pill"><input type="radio" name="age" value="18-23" required><span>18&ndash;23</span></label>
+          <label class="pill"><input type="radio" name="age" value="24-30" required><span>24&ndash;30</span></label>
+          <label class="pill"><input type="radio" name="age" value="31+" required><span>31+</span></label>
+        </div>
+
+        <label>What's your main goal?</label>
+        <div class="pill-group" role="radiogroup" aria-label="Main goal">
+          <label class="pill"><input type="radio" name="goal" value="Build muscle" required><span>Build muscle</span></label>
+          <label class="pill"><input type="radio" name="goal" value="Lose fat" required><span>Lose fat</span></label>
+          <label class="pill"><input type="radio" name="goal" value="Get stronger" required><span>Get stronger</span></label>
+          <label class="pill"><input type="radio" name="goal" value="Improve confidence" required><span>Improve confidence</span></label>
+          <label class="pill"><input type="radio" name="goal" value="Other" required><span>Other</span></label>
+        </div>
+
+        <label for="blocker">What's been holding you back in the past?</label>
+        <textarea id="blocker" name="blocker" required placeholder="Be honest &mdash; this helps me understand where to start with you."></textarea>
+
+        <div class="step-actions">
+          <button type="button" class="prev-btn" data-prev="1">Back</button>
+          <button type="button" class="next-btn" data-next="3">Continue</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="3" hidden>
+        <label for="besttime">Best time to reach you?</label>
+        <input type="text" id="besttime" name="besttime" required placeholder="e.g. weekday evenings after 6pm">
+        <div class="step-actions">
+          <button type="button" class="prev-btn" data-prev="2">Back</button>
+          <button type="submit" class="submit-btn">Submit application</button>
+        </div>
+      </div>
     </form>
-    <p class="success" id="successMsg">You're on the list. Watch your inbox &mdash; we'll reach out personally when applications open.</p>
+
+    <div class="success" id="successMsg" aria-live="polite">
+      <p class="success-title"><span id="successName"></span>You're in &mdash; application received.</p>
+      <p>Thanks for applying. Due to high volume, expect to hear from me personally within the next 72 hours.</p>
+    </div>
   </div>
 </section>
 
 <section class="signature">
   <div class="signature-inner">
     <div class="plan-stack">
-      <div class="plan-row"><span class="num">01</span><span class="label">Another 30-day meal plan</span></div>
-      <div class="plan-row"><span class="num">02</span><span class="label">The app with 500 workouts you never open</span></div>
-      <div class="plan-row"><span class="num">03</span><span class="label">A macro spreadsheet you quit tracking</span></div>
-      <div class="plan-row"><span class="num">04</span><span class="label">A trainer who ghosts after week two</span></div>
-      <div class="plan-row final"><span class="num">05</span><span class="label">A coach who asks why the first four didn't stick</span></div>
+      <div class="plan-row"><span class="num">01</span><span class="label">A gym membership you're too intimidated to use</span></div>
+      <div class="plan-row"><span class="num">02</span><span class="label">Another Pinterest workout you never started</span></div>
+      <div class="plan-row"><span class="num">03</span><span class="label">Hours of YouTube videos and still no idea what to do</span></div>
+      <div class="plan-row"><span class="num">04</span><span class="label">Waiting to feel "ready enough" to walk in</span></div>
+      <div class="plan-row final"><span class="num">05</span><span class="label">A coach who meets you exactly where you are</span></div>
     </div>
     <div class="signature-copy">
-      <h2>The problem was never <span class="highlight">the plan.</span></h2>
-      <p>You don't need another program. You need someone in your corner asking the right questions, spotting the pattern, and keeping you honest when life gets in the way. Fitness is the foundation. The physique is just the byproduct.</p>
+      <h2>You were never <span class="highlight">the problem.</span></h2>
+      <p>Nobody hands you a manual for the gym. It's normal to not know where to start &mdash; most women I coach didn't either. You don't need to already be "a gym person." You just need someone in your corner showing you what to do, why it matters, and that you can actually do this.</p>
     </div>
   </div>
 </section>
@@ -409,41 +543,84 @@
     <div class="fit-col yes">
       <h3><span class="mark">&#10003;</span>This is for you if</h3>
       <ul>
-        <li><span class="mark">&#10003;</span>You've started and stopped before, and you're done blaming yourself for it.</li>
-        <li><span class="mark">&#10003;</span>You want a real person checking in, not a calendar full of Zoom calls.</li>
-        <li><span class="mark">&#10003;</span>You're willing to message, be honest, and actually show up.</li>
-        <li><span class="mark">&#10003;</span>You want the mindset piece, not just another workout split.</li>
+        <li><span class="mark">&#10003;</span>You're a woman, roughly 24&ndash;32, and starting to realize this was never just about how you look.</li>
+        <li><span class="mark">&#10003;</span>You have little to no experience in the gym and have no idea where to start or what to do.</li>
+        <li><span class="mark">&#10003;</span>You've been thinking about it for a while, but the idea of walking in alone is honestly a little scary.</li>
+        <li><span class="mark">&#10003;</span>You're ready to commit to yourself, even as a total beginner.</li>
       </ul>
     </div>
     <div class="fit-col no">
       <h3><span class="mark">&times;</span>This isn't for you if</h3>
       <ul>
-        <li><span class="mark">&times;</span>You want a 6-week shred with zero conversation about why it didn't stick last time.</li>
-        <li><span class="mark">&times;</span>You'd rather someone else do the work for you.</li>
-        <li><span class="mark">&times;</span>You're not ready to be honest when a week goes sideways.</li>
-        <li><span class="mark">&times;</span>You're looking for the cheapest option, not the right one.</li>
+        <li><span class="mark">&times;</span>You're already deep into training and just want a plan, not guidance.</li>
+        <li><span class="mark">&times;</span>You want a quick fix before an event, not a real shift in how you live.</li>
+        <li><span class="mark">&times;</span>You're not willing to ask "beginner" questions &mdash; there are no dumb ones here.</li>
+        <li><span class="mark">&times;</span>This program is women-only, 1:1 &mdash; it's not a co-ed or group format.</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section class="closing">
-  <h2>Spots are limited when applications open.</h2>
-  <p>The waitlist gets first access &mdash; before this goes public anywhere else.</p>
-  <a href="#waitlistForm" class="btn">Join the waitlist</a>
+  <h2>You don't have to know where to start.</h2>
+  <p>You just have to apply. Spots are limited &mdash; I read every application myself.</p>
+  <a href="#applyForm" class="btn">Start your application</a>
 </section>
 
 <footer>
-  <span>&copy; 2026 JK Coaching. All rights reserved.</span>
+  <span>&copy; 2026 HJKfitness. All rights reserved.</span>
   <span>Questions? Send a message on Instagram.</span>
 </footer>
 
 <script>
-  const form = document.getElementById('waitlistForm');
+  const form = document.getElementById('applyForm');
+  const progress = document.getElementById('progress');
   const successMsg = document.getElementById('successMsg');
+  const successName = document.getElementById('successName');
+  const steps = Array.from(form.querySelectorAll('.step'));
+  const dots = Array.from(progress.querySelectorAll('.progress-dot'));
+
+  function showStep(n){
+    steps.forEach(step => {
+      step.hidden = Number(step.dataset.step) !== n;
+    });
+    dots.forEach(dot => {
+      const d = Number(dot.dataset.dot);
+      dot.classList.toggle('active', d === n);
+      dot.classList.toggle('done', d < n);
+    });
+  }
+
+  function validateStep(stepEl){
+    const fields = stepEl.querySelectorAll('input, textarea');
+    for (const field of fields){
+      if (!field.checkValidity()){
+        field.reportValidity();
+        return false;
+      }
+    }
+    return true;
+  }
+
+  form.querySelectorAll('.next-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentStep = btn.closest('.step');
+      if (!validateStep(currentStep)) return;
+      showStep(Number(btn.dataset.next));
+    });
+  });
+
+  form.querySelectorAll('.prev-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      showStep(Number(btn.dataset.prev));
+    });
+  });
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
+
+    const lastStep = steps[steps.length - 1];
+    if (!validateStep(lastStep)) return;
 
     // TODO: Replace this block with your real form backend.
     // Easiest options (free, no code):
@@ -452,7 +629,11 @@
     //   2. Tally.so or Google Forms embedded instead of this custom form.
     // Until then, this just shows a success state and does NOT save the data anywhere.
 
-    form.classList.add('hide');
+    const firstName = (document.getElementById('name').value || '').trim().split(' ')[0];
+    successName.textContent = firstName ? firstName + ', ' : '';
+
+    form.hidden = true;
+    progress.hidden = true;
     successMsg.classList.add('show');
   });
 </script>
