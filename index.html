@@ -188,6 +188,22 @@
 </footer>
 
 <script>
+  // scroll-behavior: smooth can prevent the browser from auto-scrolling to a
+  // #hash target when arriving from another page, so handle it manually.
+  // Waiting on window 'load' is unreliable (blocks on slow font/image
+  // requests), so scroll as soon as this script runs instead - the DOM is
+  // already parsed since this tag is at the end of the body.
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    }
+  }
+
   const form = document.getElementById('applyForm');
   const progress = document.getElementById('progress');
   const successMsg = document.getElementById('successMsg');
