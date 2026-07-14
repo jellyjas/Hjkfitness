@@ -591,6 +591,38 @@ footer{
   margin:0 0 30px;
 }
 
+/* ---------- WHAT'S INCLUDED PAGE ---------- */
+.features-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+  padding:0 clamp(20px,5vw,72px) clamp(56px,9vw,100px);
+  max-width:1000px;
+  margin:0 auto;
+}
+@media(min-width:700px){
+  .features-grid{grid-template-columns:1fr 1fr;}
+}
+.feature-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:clamp(24px,4vw,30px);
+}
+.feature-card .mark{margin-bottom:16px;}
+.feature-card h3{
+  font-size:18px;
+  font-weight:600;
+  font-family:'Playfair Display', serif;
+  margin:0 0 8px;
+}
+.feature-card p{
+  font-size:14.5px;
+  line-height:1.65;
+  color:var(--ink-soft);
+  margin:0;
+}
+
 /* ---------- HOW IT WORKS PAGE ---------- */
 .steps-list{
   max-width:640px;
@@ -622,6 +654,23 @@ footer{
   line-height:1.65;
   color:var(--ink-soft);
   margin:0;
+}
+a.step-item{
+  text-decoration:none;
+  color:inherit;
+  border-radius:14px;
+  margin:-14px;
+  padding:14px;
+  transition:background .15s ease;
+}
+a.step-item:hover{background:var(--cream);}
+.step-link-cta{
+  display:inline-block;
+  margin-top:12px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.02em;
+  color:var(--sage-deep);
 }
 
 /* ---------- FAQ PAGE ---------- */
