@@ -515,10 +515,24 @@ a.btn:hover{background:#1f1e19;}
   margin:0 auto;
 }
 .closing h2{
-  font-size:clamp(26px,4vw,38px);
+  font-size:clamp(26px,3.4vw,34px);
   font-weight:600;
   margin:0 0 14px;
   line-height:1.15;
+}
+.closing h2 em{
+  font-style:italic;
+  color:var(--sage-deep);
+  text-decoration:underline;
+  text-decoration-color:var(--sage);
+  text-decoration-thickness:6px;
+  text-underline-offset:-1px;
+  font-weight:600;
+}
+.mobile-break{display:inline;}
+@media(min-width:800px){
+  .mobile-break{display:none;}
+  .closing h2{white-space:nowrap;}
 }
 .closing p{
   color:var(--ink-soft);
