@@ -280,18 +280,21 @@
     });
   });
 
+  const SHEET_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbwd4B6tQHSZRVariIMKxX549TAWzbW_SDj3LrffG7TEn9dGQzxRlr79M2z_69loipQ/exec';
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
 
     const lastStep = steps[steps.length - 1];
     if (!validateStep(lastStep)) return;
 
-    // TODO: Replace this block with your real form backend.
-    // Easiest options (free, no code):
-    //   1. Formspree.io  -> create a form, then set this <form>'s action to
-    //      "https://formspree.io/f/YOUR_ID" and method="POST", remove this JS block.
-    //   2. Tally.so or Google Forms embedded instead of this custom form.
-    // Until then, this just shows a success state and does NOT save the data anywhere.
+    // mode: 'no-cors' means we can't read the response, so this is fire-and-forget -
+    // we always show the success state below regardless of whether the write succeeds.
+    fetch(SHEET_WEBAPP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new URLSearchParams(new FormData(form))
+    }).catch(() => {});
 
     const firstName = (document.getElementById('name').value || '').trim().split(' ')[0];
     successTitle.textContent = firstName ? `You're in, ${firstName}!` : `You're in!`;
