@@ -17,6 +17,7 @@
 </nav>
 
 <div class="subnav">
+  <a href="how-it-works.html">How It Works</a>
   <a href="transformations.html">Transformations</a>
   <a href="story.html">My Story</a>
   <a href="faqs.html">FAQs</a>
@@ -40,19 +41,19 @@
 
     <form id="applyForm" novalidate>
       <div class="step" data-step="1">
-        <label for="name">Name</label>
+        <label for="name">Name <span class="required-star">*</span></label>
         <input type="text" id="name" name="name" required placeholder="Your name">
-        <label for="email">Email</label>
+        <label for="email">Email <span class="required-star">*</span></label>
         <input type="email" id="email" name="email" required placeholder="you@email.com">
-        <label for="phone">Phone number</label>
+        <label for="phone">Phone number <span class="required-star">*</span></label>
         <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
         <label for="instagram">Instagram handle</label>
-        <input type="text" id="instagram" name="instagram" required placeholder="@yourhandle">
+        <input type="text" id="instagram" name="instagram" placeholder="@yourhandle">
         <button type="button" class="next-btn" data-next="2">Continue</button>
       </div>
 
       <div class="step" data-step="2" hidden>
-        <label>Age range</label>
+        <label>Age range <span class="required-star">*</span></label>
         <div class="pill-group" role="radiogroup" aria-label="Age range">
           <label class="pill"><input type="radio" name="age" value="18-23" required><span>18&ndash;23</span></label>
           <label class="pill"><input type="radio" name="age" value="24-33" required><span>24&ndash;33</span></label>
@@ -60,7 +61,7 @@
           <label class="pill"><input type="radio" name="age" value="44+" required><span>44+</span></label>
         </div>
 
-        <label>What's your main goal?</label>
+        <label>What's your main goal? <span class="required-star">*</span></label>
         <div class="pill-group" role="radiogroup" aria-label="Main goal">
           <label class="pill"><input type="radio" name="goal" value="Build muscle" required><span>Build muscle</span></label>
           <label class="pill"><input type="radio" name="goal" value="Lose fat" required><span>Lose fat</span></label>
@@ -69,7 +70,7 @@
           <label class="pill"><input type="radio" name="goal" value="Other" required><span>Other</span></label>
         </div>
 
-        <label for="blocker">What's been holding you back in the past?</label>
+        <label for="blocker">What's been holding you back in the past? <span class="required-star">*</span></label>
         <textarea id="blocker" name="blocker" required placeholder="Be honest &mdash; this helps me understand where to start with you."></textarea>
 
         <div class="step-actions">
@@ -79,7 +80,7 @@
       </div>
 
       <div class="step" data-step="3" hidden>
-        <label>What time zone are you in?</label>
+        <label>What time zone are you in? <span class="required-star">*</span></label>
         <div class="pill-group" role="radiogroup" aria-label="Time zone">
           <label class="pill"><input type="radio" name="timezone" id="tzEastern" value="Eastern (ET)" required><span>Eastern (ET)</span></label>
           <label class="pill"><input type="radio" name="timezone" id="tzCentral" value="Central (CT)" required><span>Central (CT)</span></label>
@@ -87,11 +88,11 @@
           <label class="pill"><input type="radio" name="timezone" id="tzOther" value="Other" required><span>Other</span></label>
         </div>
         <div class="conditional-field" id="tzOtherWrap" hidden>
-          <label for="tzOtherInput">Enter your time zone</label>
+          <label for="tzOtherInput">Enter your time zone <span class="required-star">*</span></label>
           <input type="text" id="tzOtherInput" name="timezoneOther" placeholder="e.g. GMT+1, Mountain Time">
         </div>
 
-        <label>What's the best time to reach you? (your local time)</label>
+        <label>What's the best time to reach you? (your local time) <span class="required-star">*</span></label>
         <div class="pill-group" role="radiogroup" aria-label="Best time to reach you">
           <label class="pill"><input type="radio" name="besttime" value="9am-12pm" required><span>9am&ndash;12pm</span></label>
           <label class="pill"><input type="radio" name="besttime" value="12pm-3pm" required><span>12pm&ndash;3pm</span></label>
@@ -160,13 +161,13 @@
 
 <section class="closing">
   <h2>You don't have to know where to start.</h2>
-  <p>You just have to apply. Spots are limited &mdash; I read every application myself.</p>
+  <p>You just have to apply. Spots are limited.</p>
   <a href="#applyForm" class="btn">Start your application</a>
 </section>
 
 <footer>
   <span>&copy; 2026 HJKfitness. All rights reserved.</span>
-  <span>Questions? Send a message on Instagram.</span>
+  <span>Questions? Email <a href="mailto:hello@hjkfitness.com">hello@hjkfitness.com</a></span>
 </footer>
 
 <script>
@@ -177,6 +178,7 @@
   const steps = Array.from(form.querySelectorAll('.step'));
   const dots = Array.from(progress.querySelectorAll('.progress-dot'));
   const tzOtherWrap = document.getElementById('tzOtherWrap');
+  const tzOtherInput = document.getElementById('tzOtherInput');
 
   function showStep(n){
     steps.forEach(step => {
@@ -217,7 +219,10 @@
   form.querySelectorAll('input[name="timezone"]').forEach(radio => {
     radio.addEventListener('change', () => {
       const checked = form.querySelector('input[name="timezone"]:checked');
-      tzOtherWrap.hidden = !(checked && checked.value === 'Other');
+      const isOther = Boolean(checked && checked.value === 'Other');
+      tzOtherWrap.hidden = !isOther;
+      tzOtherInput.required = isOther;
+      if (!isOther) tzOtherInput.value = '';
     });
   });
 

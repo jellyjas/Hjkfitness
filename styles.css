@@ -94,7 +94,7 @@ h1{
 }
 h1 em{
   font-style:italic;
-  color:var(--ink);
+  color:var(--sage-deep);
   text-decoration:underline;
   text-decoration-color:var(--sage);
   text-decoration-thickness:10px;
@@ -152,6 +152,10 @@ label{
   color:var(--ink-soft);
   font-weight:700;
   margin-bottom:-6px;
+}
+.required-star{
+  color:var(--sage-deep);
+  margin-left:1px;
 }
 input, textarea{
   font-family:'DM Sans', sans-serif;
@@ -455,6 +459,31 @@ footer{
   gap:10px;
 }
 
+/* ---------- CREDIBILITY STRIP ---------- */
+.credibility{
+  max-width:900px;
+  margin:0 auto;
+  padding:0 clamp(20px,5vw,72px) clamp(40px,7vw,72px);
+}
+.credibility-inner{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:clamp(20px,4vw,30px);
+}
+.credibility-inner h3{
+  font-size:14px;
+  font-weight:700;
+  margin:0 0 8px;
+  color:var(--ink);
+}
+.credibility-inner p{
+  font-size:14.5px;
+  line-height:1.6;
+  color:var(--ink-soft);
+  margin:0;
+}
+
 /* ---------- TRANSFORMATIONS PAGE ---------- */
 .gallery-grid{
   display:grid;
@@ -503,6 +532,39 @@ footer{
   margin:0 0 22px;
 }
 .story-body p:last-child{margin-bottom:0;}
+
+/* ---------- HOW IT WORKS PAGE ---------- */
+.steps-list{
+  max-width:640px;
+  margin:0 auto;
+  padding:0 clamp(20px,5vw,72px) clamp(60px,9vw,100px);
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+.step-item{
+  display:flex;
+  gap:18px;
+}
+.step-item .step-num{
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  font-size:28px;
+  color:var(--sage-deep);
+  flex-shrink:0;
+  width:36px;
+}
+.step-item h3{
+  font-size:16px;
+  font-weight:700;
+  margin:0 0 6px;
+}
+.step-item p{
+  font-size:15px;
+  line-height:1.65;
+  color:var(--ink-soft);
+  margin:0;
+}
 
 /* ---------- FAQ PAGE ---------- */
 .faq-body{
