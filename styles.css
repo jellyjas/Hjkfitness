@@ -415,8 +415,10 @@ a.btn:hover{background:#1f1e19;}
   border-radius:16px;
   overflow:hidden;
 }
-@media(min-width:760px){
+@media(min-width:560px){
   .fit-grid{grid-template-columns:1fr 1fr;}
+  .fit-col{padding:clamp(18px,3.2vw,38px);}
+  .fit-col li{font-size:14px;}
 }
 .fit-col{
   background:#fff;
