@@ -147,7 +147,8 @@
 <section class="fit">
   <h2>Who this is actually for</h2>
   <p class="sub-label">This isn't for everyone &mdash; and that's the point.</p>
-  <div class="fit-grid">
+  <p class="fit-swipe-hint">Swipe to see who this isn't for &rarr;</p>
+  <div class="fit-grid" id="fitGrid">
     <div class="fit-col yes">
       <h3><span class="mark">&#10003;</span>This is for you if&hellip;</h3>
       <ul>
@@ -166,6 +167,10 @@
         <li><span class="mark">&times;</span>This program is women-only, 1:1 &mdash; it's not a co-ed or group format.</li>
       </ul>
     </div>
+  </div>
+  <div class="fit-dots">
+    <button type="button" class="fit-dot active" data-target="0" aria-label="Show who this is for"></button>
+    <button type="button" class="fit-dot" data-target="1" aria-label="Show who this isn't for"></button>
   </div>
 </section>
 
@@ -205,6 +210,20 @@
       });
     }
   }
+
+  const fitGrid = document.getElementById('fitGrid');
+  const fitDots = document.querySelectorAll('.fit-dot');
+
+  fitDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      fitGrid.scrollTo({ left: fitGrid.clientWidth * Number(dot.dataset.target), behavior: 'smooth' });
+    });
+  });
+
+  fitGrid.addEventListener('scroll', () => {
+    const idx = Math.round(fitGrid.scrollLeft / fitGrid.clientWidth);
+    fitDots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+  });
 
   const form = document.getElementById('applyForm');
   const progress = document.getElementById('progress');
