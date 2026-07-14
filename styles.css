@@ -66,6 +66,16 @@ nav{
   padding:clamp(56px,10vw,120px) clamp(20px,5vw,72px) clamp(40px,6vw,80px);
   max-width:900px;
 }
+@media(min-width:880px){
+  .hero.hero-split{
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    align-items:start;
+    gap:56px;
+  }
+  .hero-copy{padding-top:8px;}
+}
 .eyebrow{
   display:inline-flex;
   align-items:center;
