@@ -474,12 +474,27 @@ footer{
   border-top:1px solid var(--line);
   display:flex;
   justify-content:space-between;
-  align-items:center;
+  align-items:flex-start;
   font-size:12.5px;
   color:var(--ink-soft);
   flex-wrap:wrap;
-  gap:10px;
+  gap:14px 24px;
 }
+.footer-left{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.footer-legal{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 16px;
+}
+.footer-legal a{
+  text-decoration:none;
+  color:var(--ink-soft);
+}
+.footer-legal a:hover{color:var(--ink);}
 
 /* ---------- CREDIBILITY STRIP ---------- */
 .credibility{
@@ -554,6 +569,17 @@ footer{
   margin:0 0 22px;
 }
 .story-body p:last-child{margin-bottom:0;}
+.story-body h2{
+  font-size:19px;
+  font-weight:600;
+  margin:36px 0 12px;
+}
+.story-body h2:first-child{margin-top:0;}
+.story-body .updated{
+  font-size:13px;
+  color:var(--ink-soft);
+  margin:0 0 30px;
+}
 
 /* ---------- HOW IT WORKS PAGE ---------- */
 .steps-list{
