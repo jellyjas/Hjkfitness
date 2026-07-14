@@ -463,6 +463,10 @@ a.btn:hover{background:#1f1e19;}
 /* ---------- CLOSING CTA ---------- */
 .closing{
   padding:clamp(60px,10vw,110px) clamp(20px,5vw,72px);
+  border-top:1px solid var(--line);
+  background:var(--cream);
+}
+.closing-inner{
   text-align:center;
   max-width:640px;
   margin:0 auto;
