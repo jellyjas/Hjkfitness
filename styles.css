@@ -609,7 +609,12 @@ footer{
   border-radius:16px;
   padding:clamp(24px,4vw,30px);
 }
-.feature-card .mark{margin-bottom:16px;}
+.feature-card .mark{
+  margin-bottom:16px;
+  background:#fff;
+  border:1.5px solid var(--sage-deep);
+  color:var(--sage-deep);
+}
 .feature-card h3{
   font-size:18px;
   font-weight:600;
