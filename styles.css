@@ -109,6 +109,28 @@ h1 em{
   margin:0 0 40px;
 }
 
+.stat-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin:0 0 36px;
+}
+.stat-row span:not(.stat-dot){
+  font-size:12.5px;
+  font-weight:700;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.stat-dot{
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:var(--sage-deep);
+  flex-shrink:0;
+}
+
 /* ---------- FORM ---------- */
 .form-card{
   background:var(--cream);
