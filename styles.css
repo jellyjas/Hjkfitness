@@ -47,14 +47,18 @@ nav{
 .nav-tag:hover{color:var(--sage-deep);}
 
 .subnav{
-  display:flex;
-  gap:clamp(16px,3vw,28px);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px clamp(16px,3vw,28px);
   padding:14px clamp(20px,5vw,72px);
   border-bottom:1px solid var(--line);
-  flex-wrap:wrap;
 }
-@media(min-width:880px){
-  .subnav{justify-content:space-between;}
+@media(min-width:500px){
+  .subnav{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
 }
 .subnav a{
   font-size:12.5px;
