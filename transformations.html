@@ -17,10 +17,16 @@
 </nav>
 
 <div class="subnav">
-  <a href="how-it-works.html">How It Works</a>
-  <a href="transformations.html" aria-current="page">Transformations</a>
-  <a href="story.html">My Story</a>
-  <a href="faqs.html">FAQs</a>
+  <button type="button" class="subnav-toggle" aria-expanded="false" aria-controls="subnavMenu">
+    Menu
+    <span class="subnav-icon"></span>
+  </button>
+  <div class="subnav-links" id="subnavMenu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="transformations.html" aria-current="page">Transformations</a>
+    <a href="story.html">My Story</a>
+    <a href="faqs.html">FAQs</a>
+  </div>
 </div>
 
 <section class="hero">
@@ -70,6 +76,8 @@
     <a href="disclaimer.html">Disclaimer</a>
   </div>
 </footer>
+
+<script src="nav.js"></script>
 
 </body>
 </html>

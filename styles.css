@@ -47,20 +47,75 @@ nav{
 .nav-tag:hover{color:var(--sage-deep);}
 
 .subnav{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px clamp(16px,3vw,28px);
-  padding:14px clamp(20px,5vw,72px);
+  position:relative;
+  padding:10px clamp(20px,5vw,72px);
   border-bottom:1px solid var(--line);
 }
+.subnav-toggle{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  background:none;
+  border:none;
+  border-radius:0;
+  margin-top:0;
+  padding:6px 0;
+  font-family:'DM Sans', sans-serif;
+  font-size:12.5px;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  cursor:pointer;
+  transition:color .15s ease;
+}
+.subnav-toggle:hover{background:none;color:var(--ink);}
+.subnav-icon{
+  width:8px;
+  height:8px;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg);
+  margin-top:-3px;
+  transition:transform .15s ease;
+}
+.subnav-toggle[aria-expanded="true"] .subnav-icon{
+  transform:rotate(-135deg);
+  margin-top:3px;
+}
+.subnav-links{
+  display:none;
+  grid-template-columns:1fr 1fr;
+  gap:12px 20px;
+  position:absolute;
+  left:clamp(20px,5vw,72px);
+  right:clamp(20px,5vw,72px);
+  top:100%;
+  margin-top:-1px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-top:none;
+  border-radius:0 0 14px 14px;
+  padding:16px clamp(20px,5vw,28px) 18px;
+  box-shadow:0 10px 24px rgba(43,42,37,0.08);
+  z-index:20;
+}
+.subnav-links.open{display:grid;}
 @media(min-width:500px){
-  .subnav{
+  .subnav{padding:14px clamp(20px,5vw,72px);}
+  .subnav-toggle{display:none;}
+  .subnav-links{
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
+    position:static;
+    background:none;
+    border:none;
+    box-shadow:none;
+    padding:0;
   }
 }
-.subnav a{
+.subnav-links a{
   font-size:12.5px;
   font-weight:700;
   letter-spacing:0.06em;
@@ -69,7 +124,7 @@ nav{
   color:var(--ink-soft);
   transition:color .15s ease;
 }
-.subnav a:hover, .subnav a[aria-current="page"]{color:var(--ink);}
+.subnav-links a:hover, .subnav-links a[aria-current="page"]{color:var(--ink);}
 
 /* ---------- HERO ---------- */
 .hero{
