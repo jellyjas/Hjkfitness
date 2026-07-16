@@ -772,6 +772,15 @@ footer{
   color:var(--ink-soft);
   margin:0;
 }
+.feature-card .shop-code{
+  margin:12px 0 0;
+  font-size:13px;
+  color:var(--sage-deep);
+  font-weight:700;
+}
+.feature-card .btn{
+  margin-top:16px;
+}
 
 /* ---------- HOW IT WORKS PAGE ---------- */
 .steps-list{
