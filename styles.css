@@ -132,6 +132,9 @@ nav{
   padding:clamp(56px,10vw,120px) clamp(20px,5vw,72px) clamp(40px,6vw,80px);
   max-width:900px;
 }
+@media(min-width:880px){
+  .hero{max-width:1100px;}
+}
 .desktop-break{display:none;}
 @media(min-width:880px){
   .hero.hero-split{
@@ -673,6 +676,9 @@ footer{
   max-width:1100px;
   margin:0 auto;
 }
+@media(min-width:880px){
+  .gallery-grid{max-width:1200px;}
+}
 .transformation-card{
   background:var(--cream);
   border:1px solid var(--line);
@@ -705,6 +711,9 @@ footer{
   margin:0 auto;
   padding:0 clamp(20px,5vw,72px) clamp(60px,9vw,100px);
 }
+@media(min-width:880px){
+  .story-body{max-width:760px;}
+}
 .story-body p{
   font-size:16.5px;
   line-height:1.75;
@@ -735,6 +744,9 @@ footer{
 }
 @media(min-width:700px){
   .features-grid{grid-template-columns:1fr 1fr;}
+}
+@media(min-width:880px){
+  .features-grid{max-width:1150px;}
 }
 .feature-card{
   background:#fff;
@@ -769,6 +781,9 @@ footer{
   display:flex;
   flex-direction:column;
   gap:30px;
+}
+@media(min-width:880px){
+  .steps-list{max-width:760px;}
 }
 .step-item{
   display:flex;
@@ -819,6 +834,9 @@ a.step-item:hover{background:var(--cream);}
   display:flex;
   flex-direction:column;
   gap:24px;
+}
+@media(min-width:880px){
+  .faq-body{max-width:760px;}
 }
 .faq-item h3{
   font-size:16px;
