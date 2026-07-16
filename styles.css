@@ -858,6 +858,36 @@ a.step-item:hover{background:var(--cream);}
   color:var(--ink-soft);
 }
 
+/* ---------- REUSABLE CALLOUT + CROSS-LINK ---------- */
+.callout{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:20px 24px;
+  font-size:14.5px;
+  line-height:1.6;
+  color:var(--ink-soft);
+  max-width:640px;
+  margin:8px auto 0;
+}
+@media(min-width:880px){
+  .callout{max-width:760px;}
+}
+.callout strong{color:var(--ink);}
+
+.cross-link{
+  text-align:center;
+  padding:0 clamp(20px,5vw,72px) 44px;
+  font-size:14px;
+  color:var(--ink-soft);
+}
+.cross-link a{
+  color:var(--sage-deep);
+  font-weight:700;
+  text-decoration:none;
+}
+.cross-link a:hover{text-decoration:underline;}
+
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   *{transition:none !important;}
