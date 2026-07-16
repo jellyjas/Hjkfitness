@@ -704,6 +704,14 @@ footer{
   font-size:13px;
   color:var(--ink-soft);
 }
+.transformation-photo{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center 20%;
+  border-bottom:1px solid var(--line);
+}
 
 /* ---------- STORY PAGE ---------- */
 .story-body{
