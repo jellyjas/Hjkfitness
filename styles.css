@@ -614,6 +614,17 @@ a.btn:hover{background:#1f1e19;}
   font-size:15.5px;
   margin:0 0 30px;
 }
+.closing-alt{
+  margin:20px 0 0;
+  font-size:13.5px;
+  color:var(--ink-soft);
+}
+.closing-alt a{
+  color:var(--sage-deep);
+  font-weight:700;
+  text-decoration:none;
+}
+.closing-alt a:hover{text-decoration:underline;}
 
 footer{
   padding:26px clamp(20px,5vw,72px) 40px;
@@ -630,6 +641,22 @@ footer{
   display:flex;
   flex-direction:column;
   gap:6px;
+}
+.footer-social{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.footer-social a{
+  display:inline-flex;
+  color:var(--ink-soft);
+  transition:color .15s ease;
+}
+.footer-social a:hover{color:var(--ink);}
+.footer-social svg{
+  width:18px;
+  height:18px;
+  display:block;
 }
 .footer-legal{
   display:flex;
