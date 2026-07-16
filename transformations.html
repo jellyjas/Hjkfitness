@@ -50,15 +50,17 @@
   </div>
 </div>
 
-<div class="gallery-grid">
-  <div class="transformation-card">
-    <img class="transformation-photo" src="assets/transformation-before.jpg" alt="Jasmine's before transformation photo">
-    <p class="caption">Before</p>
+<div class="ba-wrap">
+  <div class="ba-slider" id="baSlider" role="slider" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+    <img class="ba-img ba-after" src="assets/transformation-after.jpg" alt="Jasmine's after transformation photo">
+    <img class="ba-img ba-before" src="assets/transformation-before.jpg" alt="Jasmine's before transformation photo">
+    <span class="ba-label ba-label-before">Before</span>
+    <span class="ba-label ba-label-after">After</span>
+    <div class="ba-handle">
+      <span class="ba-handle-grip">&#10094;&#10095;</span>
+    </div>
   </div>
-  <div class="transformation-card">
-    <img class="transformation-photo" src="assets/transformation-after.jpg" alt="Jasmine's after transformation photo">
-    <p class="caption">After</p>
-  </div>
+  <p class="ba-hint">Drag to compare</p>
 </div>
 
 <div class="cross-link">
@@ -86,6 +88,7 @@
 </footer>
 
 <script src="nav.js"></script>
+<script src="compare-slider.js"></script>
 
 </body>
 </html>

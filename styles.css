@@ -668,49 +668,95 @@ footer{
 }
 
 /* ---------- TRANSFORMATIONS PAGE ---------- */
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-  gap:20px;
+.ba-wrap{
   padding:0 clamp(20px,5vw,72px) clamp(56px,9vw,100px);
-  max-width:1100px;
+}
+.ba-slider{
+  position:relative;
+  max-width:420px;
   margin:0 auto;
-}
-@media(min-width:880px){
-  .gallery-grid{max-width:1200px;}
-}
-.transformation-card{
-  background:var(--cream);
-  border:1px solid var(--line);
+  aspect-ratio:4/5;
   border-radius:16px;
   overflow:hidden;
+  border:1px solid var(--line);
+  cursor:ew-resize;
+  touch-action:none;
+  user-select:none;
 }
-.transformation-placeholder{
-  aspect-ratio:4/5;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:6px;
-  background:#fff;
-  border-bottom:1px dashed var(--line);
-  color:var(--ink-soft);
-  font-size:12.5px;
-  text-align:center;
-  padding:20px;
+@media(min-width:700px){
+  .ba-slider{max-width:480px;}
 }
-.transformation-card .caption{
-  padding:14px 16px;
-  font-size:13px;
-  color:var(--ink-soft);
-}
-.transformation-photo{
-  display:block;
+.ba-img{
+  position:absolute;
+  inset:0;
   width:100%;
-  aspect-ratio:4/5;
+  height:100%;
   object-fit:cover;
   object-position:center 20%;
-  border-bottom:1px solid var(--line);
+  display:block;
+  pointer-events:none;
+}
+.ba-before{
+  clip-path:inset(0 50% 0 0);
+}
+.ba-label{
+  position:absolute;
+  top:14px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:#fff;
+  background:rgba(0,0,0,.45);
+  padding:5px 10px;
+  border-radius:20px;
+  pointer-events:none;
+  z-index:2;
+}
+.ba-label-before{left:14px;}
+.ba-label-after{right:14px;}
+.ba-handle{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:44px;
+  margin-left:-22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:3;
+}
+.ba-handle::before{
+  content:'';
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:2px;
+  background:#fff;
+  box-shadow:0 0 0 1px rgba(0,0,0,.15);
+  transform:translateX(-50%);
+}
+.ba-handle-grip{
+  position:relative;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  letter-spacing:-1px;
+  color:var(--ink);
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.ba-hint{
+  text-align:center;
+  font-size:12.5px;
+  color:var(--ink-soft);
+  margin:12px 0 0;
 }
 
 /* ---------- STORY PAGE ---------- */
