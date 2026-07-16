@@ -85,8 +85,8 @@ nav{
 }
 .subnav-links{
   display:none;
-  grid-template-columns:1fr 1fr;
-  gap:12px 20px;
+  flex-direction:column;
+  gap:16px;
   position:absolute;
   left:clamp(20px,5vw,72px);
   right:clamp(20px,5vw,72px);
@@ -100,12 +100,13 @@ nav{
   box-shadow:0 10px 24px rgba(43,42,37,0.08);
   z-index:20;
 }
-.subnav-links.open{display:grid;}
+.subnav-links.open{display:flex;}
 @media(min-width:500px){
   .subnav{padding:14px clamp(20px,5vw,72px);}
   .subnav-toggle{display:none;}
   .subnav-links{
     display:flex;
+    flex-direction:row;
     justify-content:space-between;
     flex-wrap:wrap;
     position:static;
