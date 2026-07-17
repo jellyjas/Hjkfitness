@@ -712,13 +712,22 @@ footer{
   pointer-events:none;
 }
 .ba-before{
-  object-position:center 14%;
   clip-path:inset(0 50% 0 0);
 }
-.ba-after{
+#baSlider .ba-before{
+  object-position:center 14%;
+}
+#baSlider .ba-after{
   object-position:center 16%;
   transform:scale(1.15);
   transform-origin:50% 12%;
+}
+.ba-slider-video{
+  max-width:300px;
+  aspect-ratio:9/16;
+}
+@media(min-width:700px){
+  .ba-slider-video{max-width:340px;}
 }
 .ba-label{
   position:absolute;
