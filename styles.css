@@ -658,38 +658,6 @@ footer{
 }
 .footer-legal a:hover{color:var(--ink);}
 
-/* ---------- CREDIBILITY STRIP ---------- */
-.credibility{
-  max-width:900px;
-  margin:0 auto;
-  padding:0 clamp(20px,5vw,72px) clamp(40px,7vw,72px);
-}
-.credibility-inner{
-  background:var(--cream);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:clamp(20px,4vw,30px);
-}
-.credibility-inner h3{
-  font-size:14px;
-  font-weight:700;
-  margin:0 0 8px;
-  color:var(--ink);
-}
-.credibility-inner h3 a{
-  color:var(--sage-deep);
-  text-decoration:underline;
-  text-decoration-color:var(--sage);
-  text-underline-offset:2px;
-}
-.credibility-inner h3 a:hover{color:var(--ink);}
-.credibility-inner p{
-  font-size:14.5px;
-  line-height:1.6;
-  color:var(--ink-soft);
-  margin:0;
-}
-
 /* ---------- TRANSFORMATIONS PAGE ---------- */
 .ba-wrap{
   padding:0 clamp(20px,5vw,72px) clamp(56px,9vw,100px);
