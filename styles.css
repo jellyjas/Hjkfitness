@@ -161,6 +161,22 @@ nav{
   border-radius:100px;
   margin-bottom:28px;
   font-weight:700;
+  white-space:nowrap;
+}
+@media(max-width:440px){
+  .eyebrow{
+    font-size:10px;
+    letter-spacing:0.08em;
+    padding:7px 12px;
+  }
+}
+@media(max-width:340px){
+  .eyebrow{
+    font-size:9px;
+    letter-spacing:0.04em;
+    padding:6px 10px;
+    gap:6px;
+  }
 }
 .dot{
   width:6px;height:6px;border-radius:50%;
