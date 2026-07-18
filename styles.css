@@ -722,12 +722,11 @@ footer{
   transform:scale(1.15);
   transform-origin:50% 12%;
 }
-.ba-slider-video{
-  max-width:300px;
-  aspect-ratio:9/16;
+#formSlider .ba-before{
+  object-position:center 29%;
 }
-@media(min-width:700px){
-  .ba-slider-video{max-width:340px;}
+#formSlider .ba-after{
+  object-position:center 40%;
 }
 .ba-label{
   position:absolute;
