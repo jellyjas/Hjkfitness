@@ -846,6 +846,15 @@ footer{
   font-size:13px;
   padding:11px 10px;
 }
+.shop-photo{
+  display:block;
+  width:calc(100% + 32px);
+  margin:-16px -16px 14px;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center 15%;
+  border-radius:16px 16px 0 0;
+}
 .feature-card{
   background:#fff;
   border:1px solid var(--line);
