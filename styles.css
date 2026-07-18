@@ -212,6 +212,15 @@ h1 em{
   background:var(--sage-deep);
   flex-shrink:0;
 }
+@media(max-width:559px){
+  .stat-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px 12px;
+  }
+  .stat-row span:not(.stat-dot){font-size:11px;}
+  .stat-dot{display:none;}
+}
 
 /* ---------- FORM ---------- */
 .form-card{
