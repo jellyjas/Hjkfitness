@@ -676,6 +676,13 @@ footer{
   margin:0 0 8px;
   color:var(--ink);
 }
+.credibility-inner h3 a{
+  color:var(--sage-deep);
+  text-decoration:underline;
+  text-decoration-color:var(--sage);
+  text-underline-offset:2px;
+}
+.credibility-inner h3 a:hover{color:var(--ink);}
 .credibility-inner p{
   font-size:14.5px;
   line-height:1.6;
