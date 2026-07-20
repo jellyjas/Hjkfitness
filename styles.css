@@ -903,10 +903,13 @@ footer{
 }
 .feature-card .mark{
   margin-bottom:16px;
-  background:#fff;
-  border:1.5px solid var(--sage-deep);
+  background:none;
+  border:none;
+  width:34px;
+  height:34px;
   color:var(--sage-deep);
 }
+.feature-card .mark svg{width:100%;height:100%;}
 .feature-card h3{
   font-size:18px;
   font-weight:600;
