@@ -37,6 +37,7 @@ nav{
 }
 .wordmark span{color:var(--sage-deep);}
 .nav-tag{
+  display:none;
   font-size:12px;
   letter-spacing:0.14em;
   text-transform:uppercase;
@@ -45,6 +46,9 @@ nav{
   transition:color .15s ease;
 }
 .nav-tag:hover{color:var(--sage-deep);}
+@media(min-width:700px){
+  .nav-tag{display:inline-block;}
+}
 .nav-right{
   display:flex;
   align-items:center;
