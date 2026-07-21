@@ -45,6 +45,27 @@ nav{
   transition:color .15s ease;
 }
 .nav-tag:hover{color:var(--sage-deep);}
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.nav-social{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.nav-social a{
+  display:inline-flex;
+  color:var(--ink-soft);
+  transition:color .15s ease;
+}
+.nav-social a:hover{color:var(--sage-deep);}
+.nav-social svg{
+  width:17px;
+  height:17px;
+  display:block;
+}
 
 .subnav{
   position:relative;
