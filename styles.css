@@ -264,7 +264,7 @@ nav{
   position:relative;
   z-index:2;
   width:100%;
-  padding:clamp(96px,22vw,140px) clamp(20px,5vw,72px) clamp(56px,9vw,88px);
+  padding:clamp(130px,22vw,150px) clamp(20px,5vw,72px) clamp(56px,9vw,88px);
   color:#fff;
 }
 .eyebrow-photo{
