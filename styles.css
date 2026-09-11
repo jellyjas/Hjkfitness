@@ -322,19 +322,22 @@ nav{
   margin:12px 0 0;
 }
 .hero-photo-script{
+  display:inline-block;
   font-family:'Caveat', cursive;
   font-weight:600;
   font-size:16px;
   line-height:1.2;
   color:rgba(255,255,255,.85);
-  margin:36px 0 0 clamp(90px,32vw,150px);
+  margin:20px 0 0 clamp(90px,32vw,150px);
+  transform:rotate(-6deg);
+  transform-origin:left center;
 }
 .hero-photo-stats{
   margin:32px 0 0;
   padding-top:20px;
   border-top:1px solid rgba(255,255,255,.22);
 }
-.hero-photo-stats span:not(.stat-dot){color:rgba(255,255,255,.85);}
+.hero-photo-stats.stat-row span:not(.stat-dot){color:#fff;}
 @media(min-width:880px){
   .hero-photo{min-height:88vh;}
   .hero-photo-content{max-width:640px;padding-left:clamp(40px,6vw,96px);}
