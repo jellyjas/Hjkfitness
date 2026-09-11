@@ -313,6 +313,7 @@ nav{
   text-transform:uppercase;
   padding:16px 24px;
   border-radius:10px;
+  margin-top:14px;
   transition:background .15s ease;
 }
 .hero-photo-cta:hover{background:#6c7e5f;}
@@ -321,19 +322,8 @@ nav{
   color:rgba(255,255,255,.7);
   margin:12px 0 0;
 }
-.hero-photo-script{
-  display:inline-block;
-  font-family:'Caveat', cursive;
-  font-weight:600;
-  font-size:16px;
-  line-height:1.2;
-  color:rgba(255,255,255,.85);
-  margin:-10px 0 0 clamp(110px,36vw,170px);
-  transform:rotate(-6deg);
-  transform-origin:left center;
-}
 .hero-photo-stats{
-  margin:32px 0 0;
+  margin:56px 0 0;
   padding-top:20px;
   border-top:1px solid rgba(255,255,255,.22);
 }
@@ -341,7 +331,6 @@ nav{
 @media(min-width:880px){
   .hero-photo{min-height:88vh;}
   .hero-photo-content{max-width:640px;padding-left:clamp(40px,6vw,96px);}
-  .hero-photo-script{margin-left:clamp(280px,38vw,420px);}
 }
 
 .apply{
