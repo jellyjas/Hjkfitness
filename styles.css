@@ -217,6 +217,10 @@ nav{
 .hero-photo-h1 em{
   font-style:italic;
   color:var(--sage);
+  text-decoration:underline;
+  text-decoration-color:var(--sage-deep);
+  text-decoration-thickness:10px;
+  text-underline-offset:-2px;
   font-weight:600;
 }
 .hero-photo-sub{
