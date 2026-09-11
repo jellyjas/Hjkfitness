@@ -141,6 +141,34 @@ nav{
 .hero-menu a:last-child{border-bottom:none;}
 .hero-menu a:hover{color:var(--sage-deep);}
 
+@media(min-width:880px){
+  .nav-photo{display:flex;}
+  .nav-photo .wordmark{order:1;}
+  .nav-photo .hero-menu{order:2;}
+  .nav-photo .nav-right{order:3;}
+  .menu-toggle{display:none;}
+  .hero-menu{
+    display:flex;
+    position:static;
+    flex-direction:row;
+    align-items:center;
+    gap:28px;
+    background:none;
+    box-shadow:none;
+    padding:0;
+    margin:0;
+    min-width:0;
+  }
+  .hero-menu a{
+    padding:0;
+    font-size:12px;
+    color:rgba(255,255,255,.85);
+    border-bottom:none;
+  }
+  .hero-menu a:hover{color:var(--sage);}
+  .hero-menu a.menu-cta-link{display:none;}
+}
+
 .subnav{
   position:relative;
   padding:10px clamp(20px,5vw,72px);
