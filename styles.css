@@ -322,12 +322,12 @@ nav{
   margin:12px 0 0;
 }
 .hero-photo-script{
-  font-family:'Playfair Display', serif;
-  font-style:italic;
-  font-size:19px;
-  line-height:1.35;
+  font-family:'Caveat', cursive;
+  font-weight:600;
+  font-size:16px;
+  line-height:1.2;
   color:rgba(255,255,255,.85);
-  margin:36px 0 0;
+  margin:36px 0 0 clamp(90px,32vw,150px);
 }
 .hero-photo-stats{
   margin:32px 0 0;
@@ -338,6 +338,7 @@ nav{
 @media(min-width:880px){
   .hero-photo{min-height:88vh;}
   .hero-photo-content{max-width:640px;padding-left:clamp(40px,6vw,96px);}
+  .hero-photo-script{margin-left:clamp(280px,38vw,420px);}
 }
 
 .apply{
