@@ -257,6 +257,7 @@ nav{
   min-height:640px;
   display:flex;
   align-items:flex-end;
+  background:#0f0f0d;
 }
 .hero-photo-img{
   position:absolute;
