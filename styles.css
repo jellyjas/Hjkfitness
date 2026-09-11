@@ -286,9 +286,9 @@ nav{
 }
 .hero-photo-h1 em{
   font-style:italic;
-  color:var(--sage);
+  color:var(--sage-deep);
   text-decoration:underline;
-  text-decoration-color:var(--sage-deep);
+  text-decoration-color:var(--sage);
   text-decoration-thickness:10px;
   text-underline-offset:-2px;
   font-weight:600;
@@ -304,8 +304,8 @@ nav{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  background:var(--sage);
-  color:var(--ink);
+  background:var(--sage-deep);
+  color:#fff;
   text-decoration:none;
   font-weight:700;
   font-size:13.5px;
@@ -315,7 +315,7 @@ nav{
   border-radius:10px;
   transition:background .15s ease;
 }
-.hero-photo-cta:hover{background:var(--sage-deep);color:#fff;}
+.hero-photo-cta:hover{background:#6c7e5f;}
 .hero-photo-note{
   font-size:12.5px;
   color:rgba(255,255,255,.7);
