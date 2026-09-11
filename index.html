@@ -60,6 +60,18 @@
   </div>
 </section>
 
+<section class="fit">
+  <h2>This is for you if&hellip;</h2>
+  <ul class="fit-list">
+    <li><span class="check">&#10003;</span>You're new to the gym &mdash; or ready to finally take it seriously.</li>
+    <li><span class="check">&#10003;</span>You're tired of guessing what to do and wondering whether it's working.</li>
+    <li><span class="check">&#10003;</span>You want to build muscle, strength, confidence, and habits that last.</li>
+    <li><span class="check">&#10003;</span>You want a coach who prioritizes science-backed programming and proper form.</li>
+    <li><span class="check">&#10003;</span>You're ready to be coached and willing to put in the work.</li>
+  </ul>
+  <p class="fit-tagline">Real women. Real progress.</p>
+</section>
+
 <section class="apply">
   <div class="form-card">
     <div class="form-head">
@@ -168,36 +180,6 @@
   </div>
 </section>
 
-<section class="fit">
-  <h2>Who this is actually for</h2>
-  <p class="sub-label">This isn't for everyone &mdash; and that's the point.</p>
-  <p class="fit-swipe-hint">Swipe to see who this isn't for &rarr;</p>
-  <div class="fit-grid" id="fitGrid">
-    <div class="fit-col yes">
-      <h3><span class="mark">&#10003;</span>This is for you if&hellip;</h3>
-      <ul>
-        <li><span class="mark">&#10003;</span>You've never truly given fitness your best effort, and you're ready to see what's possible when you finally do.</li>
-        <li><span class="mark">&#10003;</span>You have no idea where to start&mdash;or whether what you're currently doing is actually working.</li>
-        <li><span class="mark">&#10003;</span>You're starting to realize that working out isn't just about how you look; it's an investment in your long-term health and quality of life.</li>
-        <li><span class="mark">&#10003;</span>You want guidance from a coach who prioritizes science-backed programming and proper lifting technique so you can train safely and make real progress.</li>
-      </ul>
-    </div>
-    <div class="fit-col no">
-      <h3><span class="mark">&times;</span>This isn't for you if</h3>
-      <ul>
-        <li><span class="mark">&times;</span>You're already deep into training and just want a plan, not guidance.</li>
-        <li><span class="mark">&times;</span>You want a quick fix before an event, not a real shift in how you live.</li>
-        <li><span class="mark">&times;</span>You're not willing to ask "beginner" questions &mdash; there are no dumb ones here.</li>
-        <li><span class="mark">&times;</span>This program is women-only, 1:1 &mdash; it's not a co-ed or group format.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="fit-dots">
-    <button type="button" class="fit-dot active" data-target="0" aria-label="Show who this is for"></button>
-    <button type="button" class="fit-dot" data-target="1" aria-label="Show who this isn't for"></button>
-  </div>
-</section>
-
 <section class="closing">
   <div class="closing-inner">
     <h2>Have you heard of<br class="mobile-break"> the <em>butterfly effect</em>?</h2>
@@ -229,20 +211,6 @@
 <script src="nav.js"></script>
 
 <script>
-  const fitGrid = document.getElementById('fitGrid');
-  const fitDots = document.querySelectorAll('.fit-dot');
-
-  fitDots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      fitGrid.scrollTo({ left: fitGrid.clientWidth * Number(dot.dataset.target), behavior: 'smooth' });
-    });
-  });
-
-  fitGrid.addEventListener('scroll', () => {
-    const idx = Math.round(fitGrid.scrollLeft / fitGrid.clientWidth);
-    fitDots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
-  });
-
   const form = document.getElementById('applyForm');
   const progress = document.getElementById('progress');
   const successMsg = document.getElementById('successMsg');
