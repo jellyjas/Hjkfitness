@@ -803,14 +803,15 @@ a.btn:hover{background:#1f1e19;}
     padding:clamp(18px,3.2vw,38px);
   }
   .fit-col li{font-size:14px;}
+  .fit-grid .fit-col h3{display:flex;}
 }
 .fit-col h3{
+  display:none;
   font-size:13px;
   text-transform:uppercase;
   letter-spacing:0.1em;
   font-weight:700;
   margin:0 0 20px;
-  display:flex;
   align-items:center;
   gap:8px;
 }
