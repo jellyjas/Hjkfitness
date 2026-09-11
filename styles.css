@@ -328,7 +328,7 @@ nav{
   font-size:16px;
   line-height:1.2;
   color:rgba(255,255,255,.85);
-  margin:20px 0 0 clamp(90px,32vw,150px);
+  margin:-10px 0 0 clamp(110px,36vw,170px);
   transform:rotate(-6deg);
   transform-origin:left center;
 }
