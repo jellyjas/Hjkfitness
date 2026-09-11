@@ -82,7 +82,7 @@ nav{
   background:transparent;
 }
 .nav-photo .wordmark{color:#fff;}
-.nav-photo .wordmark span{color:var(--sage);}
+.nav-photo .wordmark span{color:var(--sage-deep);}
 .nav-photo .nav-social a{color:rgba(255,255,255,.9);}
 .nav-photo .nav-social a:hover{color:var(--sage);}
 
