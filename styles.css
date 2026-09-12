@@ -395,7 +395,7 @@ nav{
 .apply-photo-caption{
   position:absolute;
   left:clamp(20px,5vw,72px);
-  top:18px;
+  top:32px;
   font-family:'Caveat', cursive;
   font-weight:600;
   font-size:20px;
