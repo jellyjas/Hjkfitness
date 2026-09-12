@@ -379,23 +379,23 @@ nav{
 .apply .form-card{width:100%;max-width:560px;}
 .apply-photo-wrap{
   position:relative;
-  width:100%;
-  max-width:560px;
-  border-radius:18px;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
   overflow:hidden;
-  margin-bottom:24px;
+  margin-bottom:32px;
 }
 .apply-photo{
   display:block;
   width:100%;
-  height:clamp(220px,32vw,300px);
+  height:clamp(240px,38vw,420px);
   object-fit:cover;
   object-position:center 30%;
 }
 .apply-photo-caption{
   position:absolute;
-  left:20px;
-  bottom:14px;
+  left:clamp(20px,5vw,72px);
+  bottom:16px;
   font-family:'Caveat', cursive;
   font-weight:600;
   font-size:20px;
