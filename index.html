@@ -319,6 +319,19 @@
     .step p { color: rgba(255,255,255,.66); margin: 0; }
 
     .app-section { background: var(--paper); overflow: hidden; }
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(46px, 7vw, 100px);
+    }
+    .app-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 620px;
+      margin: 0 auto;
+    }
     .feature-list { margin: 34px 0; padding: 0; list-style: none; }
     .feature-list li {
       display: grid;
@@ -402,7 +415,7 @@
       .proof-row { grid-template-columns: 1fr; padding: 12px 0; gap: 3px; min-height: 84px; }
       .proof-row span + span { border-left: 0; }
       section { padding: 82px 0; }
-      .results-grid, .fit-grid, .faq-grid { grid-template-columns: 1fr; }
+      .results-grid, .app-grid, .fit-grid, .faq-grid { grid-template-columns: 1fr; }
       .results-card { max-width: 520px; margin: 0 auto; box-shadow: 12px 14px 0 var(--sage); }
       .results-copy { order: -1; }
       .friction-top { display: block; }
@@ -771,17 +784,22 @@
     </section>
 
     <section class="app-section" id="inside">
-      <div class="wrap">
-        <p class="eyebrow sage">Everything in one place</p>
-        <h2 class="section-heading">Your plan. Your progress. <em>Your coach.</em></h2>
-        <p class="section-intro">No scattered notes, saved videos, or second-guessing. Open the app and know exactly what to do.</p>
-        <ul class="feature-list">
-          <li><span class="check">✓</span><span><strong>Custom training</strong><br>Built around your goals, schedule, equipment, and experience.</span></li>
-          <li><span class="check">✓</span><span><strong>Nutrition guidance</strong><br>Flexible support that helps you eat for your goals without living on a rigid meal plan.</span></li>
-          <li><span class="check">✓</span><span><strong>Weekly check-ins</strong><br>Progress reviews, feedback, and adjustments that keep the plan working.</span></li>
-          <li><span class="check">✓</span><span><strong>Direct support</strong><br>Ask questions, share wins, and get help when you need it.</span></li>
-        </ul>
-        <a class="button dark" href="#apply">Apply for coaching</a>
+      <div class="wrap app-grid">
+        <div class="app-copy">
+          <p class="eyebrow sage">Everything in one place</p>
+          <h2 class="section-heading">Your plan. Your progress. <em>Your coach.</em></h2>
+          <p class="section-intro">No scattered notes, saved videos, or second-guessing. Open the app and know exactly what to do.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span><span><strong>Custom training</strong><br>Built around your goals, schedule, equipment, and experience.</span></li>
+            <li><span class="check">✓</span><span><strong>Nutrition guidance</strong><br>Flexible support that helps you eat for your goals without living on a rigid meal plan.</span></li>
+            <li><span class="check">✓</span><span><strong>Weekly check-ins</strong><br>Progress reviews, feedback, and adjustments that keep the plan working.</span></li>
+            <li><span class="check">✓</span><span><strong>Direct support</strong><br>Ask questions, share wins, and get help when you need it.</span></li>
+          </ul>
+          <a class="button dark" href="#apply">Apply for coaching</a>
+        </div>
+        <div class="app-visual">
+          <img src="assets/app-mockup.png" alt="HJKfitness coaching app showing a workout tracker, today's dashboard with step tracker and nutrition, and a recipe with nutrition information" width="1123" height="1401">
+        </div>
       </div>
     </section>
 
