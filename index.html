@@ -96,6 +96,50 @@
       padding: 9px 17px;
       font-weight: 700;
     }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 24px;
+      height: 18px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: opacity .15s ease, transform .15s ease;
+    }
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(13,14,12,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 16px 24px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.85);
+      font-weight: 700;
+      font-size: .95rem;
+    }
+    .mobile-menu a:hover { color: var(--sage); }
 
     .hero {
       min-height: 820px;
@@ -358,6 +402,7 @@
     @media (max-width: 900px) {
       .wrap { width: min(100% - 28px, 680px); }
       nav a:not(.mini-cta) { display: none; }
+      .menu-toggle { display: flex; }
       .nav { min-height: 70px; }
       .brand { font-size: 1.55rem; }
       .mini-cta { padding: 8px 14px; font-size: .8rem; }
@@ -634,7 +679,16 @@
         <a href="#inside">Inside the app</a>
         <a href="#faq">FAQs</a>
         <a class="mini-cta" href="#apply">Apply now</a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#results">Results</a>
+      <a href="#coaching">How it works</a>
+      <a href="#inside">Inside the app</a>
+      <a href="#faq">FAQs</a>
     </div>
   </header>
 
