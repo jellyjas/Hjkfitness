@@ -329,6 +329,7 @@
       align-items: center;
       gap: clamp(46px, 7vw, 100px);
     }
+    .app-copy { min-width: 0; }
     .app-visual img {
       display: block;
       width: 100%;
@@ -336,21 +337,33 @@
       max-width: 620px;
       margin: 0 auto;
     }
-    .feature-list { margin: 34px 0; padding: 0; list-style: none; }
-    .feature-list li {
-      display: grid;
-      grid-template-columns: 26px 1fr;
-      gap: 14px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--line);
+    .feature-scroll {
+      margin: 34px -4px 12px;
+      padding: 4px 4px 14px;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
     }
+    .feature-scroll::-webkit-scrollbar { display: none; }
+    .feature-list { display: flex; gap: 14px; margin: 0; padding: 0; list-style: none; }
+    .feature-list li {
+      flex: 0 0 auto;
+      width: 240px;
+      scroll-snap-align: start;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 20px;
+    }
+    .feature-list li strong { display: block; margin: 12px 0 6px; }
+    .feature-list li span:last-child { color: var(--ink-soft); font-size: .92rem; }
+    .feature-scroll-hint { margin: 0 0 34px; color: var(--ink-soft); font-size: .82rem; }
     .check {
       width: 22px;
       height: 22px;
       border-radius: 50%;
       display: grid;
       place-items: center;
-      margin-top: 2px;
       background: var(--sage);
       font-size: .78rem;
       font-weight: 700;
@@ -813,14 +826,17 @@
           <p class="eyebrow sage">Everything in one place</p>
           <h2 class="section-heading">Your plan. Your progress. <em>Your coach.</em></h2>
           <p class="section-intro">No scattered notes, saved videos, or second-guessing. Open the app and know exactly what to do.</p>
-          <ul class="feature-list">
-            <li><span class="check">✓</span><span><strong>Custom training</strong><br>Built around your goals, schedule, equipment, and experience.</span></li>
-            <li><span class="check">✓</span><span><strong>Nutrition guidance</strong><br>Flexible support that helps you eat for your goals without living on a rigid meal plan.</span></li>
-            <li><span class="check">✓</span><span><strong>Progress tracking</strong><br>Track workouts, measurements, and progress photos all in one place.</span></li>
-            <li><span class="check">✓</span><span><strong>Weekly check-ins</strong><br>Progress reviews, feedback, and adjustments that keep the plan working.</span></li>
-            <li><span class="check">✓</span><span><strong>Direct support</strong><br>Ask questions, share wins, and get help when you need it.</span></li>
-            <li><span class="check">✓</span><span><strong>Education</strong><br>Helpful guides, videos, and resources to level up your results.</span></li>
-          </ul>
+          <div class="feature-scroll">
+            <ul class="feature-list">
+              <li><span class="check">✓</span><strong>Custom training</strong><span>Built around your goals, schedule, equipment, and experience.</span></li>
+              <li><span class="check">✓</span><strong>Nutrition guidance</strong><span>Flexible support that helps you eat for your goals without living on a rigid meal plan.</span></li>
+              <li><span class="check">✓</span><strong>Progress tracking</strong><span>Track workouts, measurements, and progress photos all in one place.</span></li>
+              <li><span class="check">✓</span><strong>Weekly check-ins</strong><span>Progress reviews, feedback, and adjustments that keep the plan working.</span></li>
+              <li><span class="check">✓</span><strong>Direct support</strong><span>Ask questions, share wins, and get help when you need it.</span></li>
+              <li><span class="check">✓</span><strong>Education</strong><span>Helpful guides, videos, and resources to level up your results.</span></li>
+            </ul>
+          </div>
+          <p class="feature-scroll-hint">Swipe to see everything included</p>
           <a class="button dark" href="#apply">Apply for coaching</a>
         </div>
         <div class="app-visual">
