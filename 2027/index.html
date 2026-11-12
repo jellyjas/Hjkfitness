@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Built for 2027 | HJKfitness</title>
+<meta name="description" content="A 30-day beginner strength challenge for women who are done starting over. $27. December 1 to 30.">
+<meta name="theme-color" content="#0E0F0B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Built for 2027 | A 30-day beginner strength challenge">
+<meta property="og:description" content="Everyone starts January 1. You'll already be 30 days in. $27, December 1 to 30.">
+<meta property="og:url" content="https://hjkfitness.com/2027">
+<meta property="og:image" content="https://hjkfitness.com/2027/images/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap">
+<style>
+:root{--cream:#FAF7EF;--ink:#1A1C14;--lime:#C6F135;--muted:#5E6152;--muted-light:#D6D8CA;--sand:#F0ECDF;--night:#0E0F0B;--track:#3A3D33;--line:#C9C6B6;--serif:'Playfair Display',Georgia,serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:var(--ink)}
+p{text-wrap:pretty}
+.container{max-width:1160px;margin:0 auto;padding-left:20px;padding-right:20px}
+.narrow{max-width:760px;margin:0 auto;padding-left:20px;padding-right:20px}
+.pad{padding-top:clamp(56px,10vw,88px);padding-bottom:clamp(56px,10vw,88px)}
+.pad-lg{padding-top:clamp(56px,10vw,96px);padding-bottom:clamp(56px,10vw,96px)}
+.stack{display:flex;flex-direction:column;gap:20px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.h2{margin:0;font-family:var(--serif);font-weight:700;font-size:clamp(2.125rem,4.4vw,3.25rem);line-height:1.12;text-wrap:balance}
+.h2-lg{font-size:clamp(2.5rem,5.4vw,4rem);line-height:1.08}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 32px;font-weight:700;font-size:18px;text-decoration:none;white-space:nowrap}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--cream)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+
+/* Countdown ticker */
+.ticker{background:var(--lime);color:var(--ink);overflow:hidden;padding:10px 0;font-size:15px;font-weight:700;line-height:1.3;font-variant-numeric:tabular-nums}
+.ticker-track{display:flex;width:max-content;animation:ticker 60s linear infinite}
+.ticker-track span{flex:none;padding-right:72px;white-space:nowrap}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* Hero */
+.hero{position:relative;min-height:720px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:var(--night);color:#fff}
+.hero-header{position:absolute;top:0;left:0;right:0;z-index:3;padding:24px clamp(20px,6vw,96px)}
+.wordmark{font-family:var(--serif);font-weight:700;font-size:22px}
+.hero-media{position:absolute;top:0;right:0;bottom:0;left:36%;z-index:0}
+.hero-media img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,#0E0F0B 0%,rgba(14,15,11,.7) 22%,rgba(14,15,11,0) 55%)}
+.hero-copy{position:relative;z-index:2;max-width:720px;padding:120px clamp(20px,6vw,96px) 80px;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.hero-copy .eyebrow{color:var(--muted-light)}
+.hero h1{margin:0;display:flex;flex-direction:column;gap:8px;font-weight:700}
+.hero .lead{font-weight:500;font-size:clamp(1.25rem,2.2vw,1.625rem);line-height:1.3;color:var(--muted-light)}
+.hero .big{font-family:var(--serif);font-size:clamp(2.75rem,5vw,4.5rem);line-height:1.02;letter-spacing:-.015em}
+.underline{display:block;font-style:italic;font-weight:600;text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:.14em;text-underline-offset:.12em;text-decoration-skip-ink:none}
+.hero-sub{margin:0;max-width:30em;font-size:19px;line-height:1.5}
+.hero .btn{margin-top:4px}
+.hero-note{font-size:14px;line-height:1.4;color:var(--muted-light)}
+
+/* December band */
+.dark{background:var(--ink);color:var(--cream)}
+.on-dark{color:var(--muted-light)}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:clamp(32px,5vw,56px);align-items:center}
+.cal{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px}
+.cal span{aspect-ratio:1;background:var(--lime);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.jan{margin-top:8px;min-height:64px;padding:12px 16px;border:1px dashed var(--muted-light);display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px}
+.jan strong{font-family:var(--serif);font-size:22px}
+
+/* Problem */
+.problem p{margin:0;font-size:20px}
+.problem .positioning{margin-top:8px;font-family:var(--serif);font-style:italic;font-weight:600;font-size:24px;line-height:1.35;text-wrap:balance}
+
+/* What you get */
+.rule-top{border-top:1px solid var(--ink)}
+.intro{display:flex;flex-direction:column;gap:12px;max-width:640px}
+.intro p{margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:40px;margin-top:clamp(28px,4vw,40px)}
+.card{display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:4px solid var(--lime)}
+.card .num{font-family:var(--serif);font-weight:700;font-size:32px;line-height:1}
+.card h3{margin:0;font-size:22px;line-height:1.3}
+.card p{margin:0}
+.dots{display:none}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.dot.on{background:var(--ink)}
+
+/* Roadmap */
+.progress{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:clamp(28px,4vw,40px)}
+.progress div{height:10px;background:var(--track);overflow:hidden}
+.progress span{display:block;height:100%;background:var(--lime);animation:fill .7s ease-out both paused}
+.progress.in span{animation-play-state:running}
+.progress div:nth-child(1) span{animation-delay:.2s}
+.progress div:nth-child(2) span{animation-delay:.9s}
+.progress div:nth-child(3) span{animation-delay:1.6s}
+.progress div:nth-child(4) span{animation-delay:2.3s}
+@keyframes fill{from{width:0}to{width:100%}}
+.weeks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:32px;margin-top:clamp(28px,4vw,40px)}
+.week{display:flex;flex-direction:column;gap:10px}
+.week-label{display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.week-label b{color:var(--lime);font-variant-numeric:tabular-nums}
+.week h3{margin:0;font-family:var(--serif);font-size:26px;line-height:1.2}
+.week p{margin:0;color:var(--muted-light)}
+
+/* Meet your coach */
+.sand{background:var(--sand)}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,5vw,56px);align-items:center}
+.about-photo{width:100%;max-width:440px;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+.about-copy p{margin:0}
+.about-copy .eyebrow{font-size:14px;letter-spacing:.1em}
+.coach-quote{font-family:var(--serif);font-weight:600;font-size:clamp(1.875rem,3.6vw,2.625rem);line-height:1.18;text-wrap:balance}
+.before-after{margin:8px 0 0;display:flex;flex-direction:column;gap:10px;max-width:360px}
+.before-after img{width:100%;aspect-ratio:900/1125;object-fit:cover}
+.before-after figcaption{display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* Quote band */
+.quote-band{background:var(--night);color:#fff;text-align:center}
+.quote-band .narrow{min-height:clamp(380px,46vw,560px);display:flex;flex-direction:column;justify-content:center;gap:6px;padding-top:56px;padding-bottom:56px}
+.quote-band p{margin:0;font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.15}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:0}
+.faq summary{min-height:44px;padding:14px 0;font-size:19px;font-weight:700;line-height:1.35;cursor:pointer}
+.faq details p{margin:0 0 20px}
+.faq details p.tight{margin-bottom:12px}
+.link-lime{display:inline-flex;align-items:center;min-height:44px;margin-bottom:16px;font-weight:700;text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:4px}
+
+/* Try / don't */
+.try{max-width:1000px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:40px 56px}
+.try p{margin:0;font-family:var(--serif);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1.12;text-wrap:balance}
+.try .dont{color:var(--muted)}
+.try .dont p{font-style:italic;font-weight:600}
+
+/* Sticky bar (phones) */
+.sticky{display:none}
+
+/* Join */
+.join{background:var(--lime);color:var(--ink);text-align:center}
+.join .narrow{display:flex;flex-direction:column;align-items:center;gap:20px}
+.join p{margin:0;font-size:20px}
+.price{font-family:var(--serif);font-weight:700;font-size:88px;line-height:1}
+.countdown{display:flex;flex-direction:column;align-items:center;gap:8px}
+.countdown .eyebrow{font-size:14px;letter-spacing:.1em}
+.units{display:flex;justify-content:center;gap:8px}
+.unit{width:68px;padding:10px 0 8px;background:var(--ink);color:var(--cream);display:flex;flex-direction:column;align-items:center;gap:2px}
+.unit b{font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
+.unit small{font-size:12px;font-weight:500;line-height:1.3}
+.join-note{max-width:30em;font-size:16px;font-weight:500}
+.join .btn{padding:0 40px}
+
+/* Footer */
+.footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:28px;padding-bottom:28px;font-size:15px}
+.footer .wordmark{font-size:18px}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 24px}
+
+@media (max-width:720px){
+  .hero{min-height:760px;justify-content:flex-end}
+  .hero-media{left:0}
+  .hero-media img{top:-22%;height:122%;object-position:8% 30%}
+  .hero-media::after{background:linear-gradient(to top,rgba(10,11,8,.94) 0%,rgba(10,11,8,.75) 38%,rgba(10,11,8,0) 62%)}
+  .hero-copy{max-width:none;padding:96px 20px 32px}
+  .hero .big{font-size:2.5rem}
+  .hero-sub{font-size:17px}
+  .hero .btn,.join .btn{width:100%}
+  .cards{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-left:-20px;margin-right:-20px;padding:0 20px 4px;scroll-padding-left:20px}
+  .cards::-webkit-scrollbar{display:none}
+  .card{flex:0 0 82%;scroll-snap-align:start;padding:20px;background:var(--sand)}
+  .dots{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px}
+  .dots .row{display:flex;gap:8px}
+  .dots .hint{font-size:14px;font-weight:500;color:var(--muted)}
+  .sticky{display:flex;position:sticky;bottom:0;z-index:10;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--ink);color:var(--cream);align-items:center;justify-content:space-between;gap:12px}
+  .sticky-text{font-size:15px;line-height:1.3}
+  .sticky .btn{flex:none;min-height:48px;padding:0 20px;font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ticker-track,.progress span{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div>
+  <div class="ticker" role="timer" aria-label="Countdown to enrollment">
+    <div class="ticker-track" aria-hidden="true">
+      <span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span><span class="tick">Limited spots · Enrollment opens soon</span>
+    </div>
+  </div>
+
+  <section class="hero">
+    <header class="hero-header"><div class="wordmark">hjkfitness</div></header>
+    <div class="hero-copy">
+      <div class="eyebrow">Built for 2027</div>
+      <h1>
+        <span class="lead">Everyone starts January 1.</span>
+        <span class="big">You'll already be <span class="underline">30 days in.</span></span>
+      </h1>
+      <p class="hero-sub">A 30-day beginner strength challenge for women who are done starting over.</p>
+      <a class="btn btn-lime cta" href="https://www.instagram.com/hjkfitness" data-pre="Doors open Mon, Nov 23" data-open="Join for $27">Doors open Mon, Nov 23</a>
+      <div class="hero-note pre-only">Follow @hjkfitness so you're first to know.</div>
+    </div>
+    <div class="hero-media"><img src="/2027/images/hero.jpg" alt="Jasmine in the gym, wearing headphones" width="1400" height="2100" fetchpriority="high"></div>
+  </section>
+
+  <section class="dark">
+    <div class="container pad split">
+      <div class="stack">
+        <h2 class="h2">December is the head start.</h2>
+        <p class="on-dark" style="margin:0;max-width:28em">In January the gym fills up with people on day one, trying to figure out the machines. By then you'll know your way around, you'll have a routine, and you'll have proof you can stick with something.</p>
+      </div>
+      <div>
+        <div class="cal" role="img" aria-label="Thirty day calendar for December, with January 1 marked as everyone else's day one"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span></div>
+        <div class="jan"><strong>Jan 1</strong><span class="on-dark" style="font-size:16px">Everyone else's day one.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="narrow pad-lg stack problem">
+    <h2 class="h2 h2-lg" style="margin-bottom:8px">You're not lazy. You're lost.</h2>
+    <p>You've saved the workouts. You've bought the plan. You've started over on a Monday more times than you want to count.</p>
+    <p>Then you walk into the gym, have no idea what to do, and leave a little more convinced that you're the problem.</p>
+    <p>You're not. Nobody ever gave you a clear path. So here's one: 30 days, no guessing, with a group of women starting the same day you are.</p>
+    <p class="positioning">Not a crash diet. Not a 30-day transformation. A foundation you can keep.</p>
+  </section>
+
+  <section class="rule-top">
+    <div class="container pad">
+      <div class="intro">
+        <h2 class="h2">What you get for $27</h2>
+        <p><strong>One app for it all.</strong> Your workouts, demos, progress, community and check-ins, all in one place on your phone.</p>
+      </div>
+      <div class="cards" id="cards">
+        <div class="card"><div class="num">01</div><h3>12 guided workouts</h3><p>Three full-body strength workouts a week, 40 to 55 minutes each, written by me for beginners. Walk in, open your phone and know exactly what to do.</p></div>
+        <div class="card"><div class="num">02</div><h3>A private community</h3><p>Everyone in the challenge shares a private forum in the app. Introduce yourself, share your weekly wins, ask questions and cheer each other on. Nobody does this alone.</p></div>
+        <div class="card"><div class="num">03</div><h3>Weekly check-ins</h3><p>A group check-in every week with guidance from me, so one rough week gets caught before it turns into quitting.</p></div>
+        <div class="card"><div class="num">04</div><h3>Demos and swaps</h3><p>Every exercise comes with a demo video, coaching cues and an approved swap if a machine is taken or a move doesn't feel right.</p></div>
+        <div class="card"><div class="num">05</div><h3>Progress you can see</h3><p>Log your weights and reps as you go, with a starting and ending check-in so you can see exactly what changed.</p></div>
+      </div>
+      <div class="dots" aria-hidden="true">
+        <div class="row"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <span class="hint">Swipe →</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="container pad">
+      <div class="stack" style="gap:16px;max-width:720px">
+        <h2 class="h2">How the 30 days work</h2>
+        <p class="on-dark" style="margin:0">You repeat the same three workouts all month, so you can learn them, track them and watch yourself get stronger.</p>
+      </div>
+      <div class="progress" id="progress" role="img" aria-label="Progress bar showing the four weeks of the challenge"><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div></div>
+      <div class="weeks">
+        <div class="week"><div class="week-label"><span>Week 1 · Dec 1</span><b>25%</b></div><h3>Learn the movements</h3><p>Light weights while you get comfortable with the equipment, the exercises and following a plan.</p></div>
+        <div class="week"><div class="week-label"><span>Week 2 · Dec 8</span><b>50%</b></div><h3>Build confidence</h3><p>Same workouts, now familiar. Less hesitation, smoother setup, and a routine that starts to feel like yours.</p></div>
+        <div class="week"><div class="week-label"><span>Week 3 · Dec 15</span><b>75%</b></div><h3>Add reps with control</h3><p>A few more good reps with the weights you already know. Progress you can actually measure.</p></div>
+        <div class="week"><div class="week-label"><span>Week 4 · Dec 22</span><b>100%</b></div><h3>Increase weight when ready</h3><p>Make your own training decisions and finish with a routine you understand and can keep going.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sand">
+    <div class="container pad about">
+      <img class="about-photo" src="/2027/images/coach.jpg" alt="Jasmine smiling, in a blue training set" width="880" height="1100" loading="lazy">
+      <div class="stack about-copy">
+        <div class="eyebrow">Hi, I'm Jasmine</div>
+        <p class="coach-quote">Most coaches hand you a plan. I fix why the last 10 didn't work.</p>
+        <p>I'm a certified personal trainer and mindset coach, and everything I do comes back to one idea: fitness is the foundation, and your physique is the byproduct.</p>
+        <p>Built for 2027 is the same approach in 30 days. Structure first. Motivation can show up whenever it wants.</p>
+        <figure class="before-after">
+          <img src="/2027/images/before-after.jpg" alt="Jasmine before strength training, walking in a blue tank top, and now, in the gym" width="900" height="1125" loading="lazy">
+          <figcaption><span>Me, before</span><span>Me, now</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="narrow">
+      <p>Discipline is hard.</p>
+      <p style="font-style:italic">Staying the same is harder.</p>
+    </div>
+  </section>
+
+  <section class="narrow pad-lg stack faq">
+    <h2 class="h2">Before you ask</h2>
+    <div>
+      <details open><summary>I've never really lifted. Can I do this?</summary><p>That's exactly who it's for. Every workout is written for someone new to the gym.</p></details>
+      <details><summary>Do I need a gym membership?</summary><p>Yes. The workouts use common gym equipment like the leg press, cable machines, Smith machine and dumbbells, so have a membership lined up by December 1.</p></details>
+      <details><summary>What if I miss a day?</summary><p>You pick it back up the next day. Missing a day doesn't end anything. Stopping does, and that's what the group and the check-ins are there for.</p></details>
+      <details><summary>What if I can't do an exercise?</summary><p>Every exercise has an approved swap, so you're never stuck if a machine is taken or a move doesn't feel right. If something causes sharp or unusual pain, stop and message me.</p></details>
+      <details><summary>Is the $27 a subscription?</summary><p>No. One payment, 30 days.</p></details>
+      <details><summary>Is nutrition included?</summary><p>No, and that's on purpose. This challenge is focused on helping you build a consistent training routine. Personalized nutrition support is part of 1:1 coaching.</p></details>
+      <details><summary>What happens after day 30?</summary><p>You keep the routine you built, and every participant gets a free 2027 strategy call with me to map out what's next.</p></details>
+      <details><summary>Can I work with you 1:1 instead?</summary><p class="tight">Yes. If you already know you want a plan built around you, with personalized training, nutrition and weekly check-ins, you can apply for 1:1 coaching.</p><a class="link-lime" href="https://hjkfitness.com/#apply">Apply for 1:1 coaching</a></details>
+    </div>
+  </section>
+
+  <section class="rule-top">
+    <div class="container pad-lg try">
+      <div class="stack" style="gap:12px"><div class="eyebrow">If you try</div><p>You succeed, or you learn.</p></div>
+      <div class="stack dont" style="gap:12px"><div class="eyebrow">If you don't</div><p>You wonder "what if" forever.</p></div>
+    </div>
+  </section>
+
+  <div class="sticky">
+    <div class="sticky-text"><strong>$27</strong><span id="sticky-text"> for 30 days. Opens Nov 23.</span></div>
+    <a class="btn btn-lime cta" href="https://www.instagram.com/hjkfitness" data-pre="Follow" data-open="Join now">Follow</a>
+  </div>
+</div>
+
+<section class="join" id="join">
+  <div class="narrow pad-lg">
+    <h2 class="h2 h2-lg">Start before everyone else does.</h2>
+    <p>12 guided workouts, demos and swaps, a private community and weekly check-ins. December 1 to 30.</p>
+    <div class="price">$27</div>
+    <div class="countdown" id="countdown">
+      <div class="eyebrow" id="cd-label">Enrollment opens in</div>
+      <div class="units" role="timer" aria-label="Countdown to enrollment">
+        <div class="unit"><b id="cd-d">0</b><small>days</small></div>
+        <div class="unit"><b id="cd-h">00</b><small>hours</small></div>
+        <div class="unit"><b id="cd-m">00</b><small>mins</small></div>
+        <div class="unit"><b id="cd-s">00</b><small>secs</small></div>
+      </div>
+    </div>
+    <a class="btn btn-ink cta" href="https://www.instagram.com/hjkfitness" data-pre="Doors open Mon, Nov 23" data-open="Join for $27">Doors open Mon, Nov 23</a>
+    <div class="join-note" id="join-note">Follow @hjkfitness so you're first to know when doors open. Spots are limited.</div>
+  </div>
+</section>
+
+<footer class="container footer">
+  <div class="wordmark">hjkfitness</div>
+  <div class="footer-links">
+    <a href="https://hjkfitness.com/#apply">Looking for 1:1 coaching? Apply here</a>
+    <a href="https://www.instagram.com/hjkfitness">@hjkfitness on Instagram</a>
+  </div>
+</footer>
+
+<script>
+/* ===== Settings: change these if dates or links change ===== */
+var CONFIG = {
+  opensAt: '2026-11-23T09:00:00-05:00',   // Monday, Nov 23, 9:00 a.m. Eastern
+  closesAt: '2026-11-29T23:59:00-05:00',  // Sunday, Nov 29, 11:59 p.m. Eastern
+  checkoutUrl: '',                         // Paste your purchase link here before Nov 23
+  followUrl: 'https://www.instagram.com/hjkfitness'
+};
+/* ========================================================== */
+
+(function () {
+  var opensAt = Date.parse(CONFIG.opensAt);
+  var closesAt = Date.parse(CONFIG.closesAt);
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  var ctas = document.querySelectorAll('.cta');
+  var ticks = document.querySelectorAll('.tick');
+  var stickyText = document.getElementById('sticky-text');
+  var countdown = document.getElementById('countdown');
+  var cdLabel = document.getElementById('cd-label');
+  var joinNote = document.getElementById('join-note');
+  var preOnly = document.querySelectorAll('.pre-only');
+  var ticker = document.querySelector('.ticker');
+  var units = { d: document.getElementById('cd-d'), h: document.getElementById('cd-h'), m: document.getElementById('cd-m'), s: document.getElementById('cd-s') };
+
+  function update() {
+    var now = Date.now();
+    var pre = now < opensAt;
+    var closed = now >= closesAt;
+    var left = Math.max(0, Math.floor(((pre ? opensAt : closesAt) - now) / 1000));
+    var d = Math.floor(left / 86400), h = Math.floor(left / 3600) % 24, m = Math.floor(left / 60) % 60, s = left % 60;
+
+    var line = 'Limited spots · Enrollment ' + (pre ? 'opens' : 'closes') + ' in ' + d + 'd ' + pad(h) + 'h ' + pad(m) + 'm ' + pad(s) + 's';
+    ticks.forEach(function (t) { t.textContent = line; });
+    ticker.hidden = closed;
+
+    units.d.textContent = d; units.h.textContent = pad(h); units.m.textContent = pad(m); units.s.textContent = pad(s);
+    countdown.hidden = closed;
+    cdLabel.textContent = pre ? 'Enrollment opens in' : 'Enrollment closes in';
+
+    stickyText.textContent = pre ? ' for 30 days. Opens in ' + d + 'd ' + h + 'h' : (closed ? ' for 30 days. Enrollment closed.' : ' for 30 days. Closes in ' + d + 'd ' + h + 'h');
+    joinNote.textContent = pre
+      ? 'Follow @hjkfitness so you’re first to know when doors open. Spots are limited.'
+      : (closed ? 'Enrollment is closed.' : 'Spots are limited. Enrollment closes Sunday, November 29 at 11:59 p.m. ET.');
+    preOnly.forEach(function (el) { el.hidden = !pre; });
+
+    var href = pre ? CONFIG.followUrl : (CONFIG.checkoutUrl || '#join');
+    ctas.forEach(function (a) {
+      a.textContent = pre ? a.dataset.pre : a.dataset.open;
+      a.href = href;
+      if (pre) { a.target = '_blank'; a.rel = 'noopener'; } else { a.removeAttribute('target'); a.removeAttribute('rel'); }
+    });
+  }
+  update();
+  setInterval(update, 1000);
+
+  // Swipe dots for the "What you get" cards on phones
+  var cards = document.getElementById('cards');
+  var dots = document.querySelectorAll('.dot');
+  cards.addEventListener('scroll', function () {
+    var first = cards.firstElementChild;
+    var i = Math.min(dots.length - 1, Math.max(0, Math.round(cards.scrollLeft / (first.offsetWidth + 12))));
+    dots.forEach(function (dot, j) { dot.classList.toggle('on', j === i); });
+  }, { passive: true });
+
+  // Fill the roadmap bar when it scrolls into view
+  var progress = document.getElementById('progress');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (e) { if (e.isIntersecting) { progress.classList.add('in'); obs.disconnect(); } });
+    }, { threshold: 0.4 }).observe(progress);
+  } else {
+    progress.classList.add('in');
+  }
+})();
+</script>
+</body>
+</html>
