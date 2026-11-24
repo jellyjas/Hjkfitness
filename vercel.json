@@ -1,15 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/2027/guides/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "https://app.everfit.io"
-        }
-      ]
-    }
-  ]
+  "trailingSlash": false
 }
